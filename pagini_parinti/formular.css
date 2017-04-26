@@ -1,0 +1,179 @@
+
+.button {
+  display: none;
+  border-radius: 4px;
+  background-color: gold;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 1000px;
+  float: left;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+h3{
+
+
+  color: gold;
+  text-decoration: overline;
+}
+input{
+	border-radius: 10px;
+	font-family: "Georgia";
+	width: 300px;
+	height: 50px;
+}
+
+textarea{
+
+    resize: none;
+	border-radius: 10px;
+	font-family: "Georgia";
+    width: 100%;
+    height: 100%;
+    font-size: 20px; 
+   
+  
+ }
+ .question{
+ 
+     margin-left:50px;
+     margin-top:80px;
+     width:500px;
+     height: 170px;
+     float: left;
+ }
+
+.answer{
+	
+ 	 margin-left:50px;
+     margin-top:50px;
+     width:300px;
+     float: left;
+}
+
+.save{
+	
+    margin-top: 268px;
+    width: 70px;
+    height: 60px;
+    background-color: green;
+    border-radius:  40px 10px 40px 10px;
+    margin-left: 908px;
+}
+
+.saves{
+	width: 100%;
+    height: 100%;
+     border-radius:  40px 10px 40px 10px;
+}
+
+.formular{
+	 width:75%;
+     height:325px;
+  float: left;
+   border-radius:  40px 10px 40px 10px;
+   margin-bottom: 30px;
+   background: linear-gradient(slategray,dodgerblue); 
+
+}
+
+.formular1{
+	width:75%;
+    height:325px;
+    float: left;
+    margin-left: 260px;
+     border-radius:  40px 10px 40px 10px;
+     margin-bottom: 30px;
+    display:none;
+    background: linear-gradient(slategray,dodgerblue); 
+
+ 
+
+}
+
+
+.container{
+overflow:hidden;
+width:1300px;
+
+}
+
+.domain{
+   font-family: "Georgia";
+   float:left;
+   font-size: 20px;  
+   width:245px;
+   margin-right: 15px;
+   
+    border-radius:  5px 5px 50px 50px;
+    color: #FFFFFF;
+     background: linear-gradient(slategray,dodgerblue); 
+}
+ input[type='radio'] {
+  -webkit-appearance:none;
+  width:25px;
+  height:25px;
+  border:1px solid darkgray;
+  border-radius:50%;
+  outline:none;
+  box-shadow:0 0 5px 0px grey inset;
+  vertical-align: bottom;
+  transition:box-shadow 1s;
+
+
+}
+
+input[type='radio']:hover {
+  box-shadow:0 0 5px 0px  white inset;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;  
+  transition:background 1s;  
+}
+
+input[type='radio']:checked:before {
+  background:gold;
+}
+
+
+
+
+

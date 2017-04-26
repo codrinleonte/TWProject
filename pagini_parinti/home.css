@@ -1,0 +1,377 @@
+.parallax {
+  
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-nav {
+
+  overflow: hidden;
+  background-color: #40464B;
+
+
+}
+
+.top-nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s;
+
+}
+
+.top-nav a:hover {
+  
+  color: #00B3FE;
+}
+
+.top-nav a:active {
+
+    color: white;
+
+}
+
+.bottom-second-bar {
+   
+    background-color:  #40464B;
+   
+    
+    height: 50px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.bottom-label{
+    margin-left:100px;
+    color:white;
+    font-size: 15px;
+    font-family: "Georgia";
+}
+
+
+.bottom-first-bar {
+   
+    background-color:  #384452;
+    height: 300px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
+  float:left;
+  margin-left: 100px;
+  overflow:hidden;
+  
+}
+
+.first_bottom_column{
+
+  width:300px;
+  height:300px;
+ 
+}
+.second_bottom_column{
+  
+   width:120px;
+}
+.third_bottom_column{
+
+} 
+.fourth_bottom_column{
+
+}
+
+.bottom_column_label{
+  height: 300px;
+  color:white;
+  font-size: 15px;
+  font-family: "Georgia";
+  margin-bottom:100px; 
+  display:table-cell;
+}
+
+
+.clasamente_wrapper{
+  background-color: white;
+  width:100%;
+  height:400px;
+
+}
+
+.last_scores,.best_Averages,.most_Accesed{
+   float:left;
+   width : 300px;
+   height: 300px;
+   margin-top:20px;
+   position: absolute;
+}
+
+.last_scores{
+   margin-left:200px;
+}
+
+
+.best_Averages{
+margin-left:500px;
+}
+
+
+.most_Accesed{
+ margin-left:1000px;
+}
+
+
+.clock_image{
+  content:url("../images/legal-information-8.png");
+  width:50px;
+  height: 50px;
+}
+
+.trophy_image{
+  content:url("../images/Trophyicon_1198.png");
+  width:50px;
+  height: 50px;
+  margin-left:100px;
+}
+
+.scores_podium_image{
+  content:url("../images/42913.png");
+  width:250px;
+  height:200px;
+  margin-top: 100px;
+
+}
+
+.test_image{
+  content:url("../images/83825-200.png");
+  width:50px;
+  height: 50px;
+    margin-left: 100px;
+}
+
+.tests_podium_image{
+  content:url("../images/testPod.png");
+  width:250px;
+  height:100px;
+  margin-top: 190px;
+}
+
+
+
+.dropbtn {
+  
+    padding: 10px 12px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background: url("../images/FEZ-04-512.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.settingsBut {
+    float:right;
+  
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.settings-content {
+    display: none;
+    position: absolute;
+    width:150px;
+    
+    z-index: 1;
+    background-color:#40464B;
+   
+}
+
+.settings-content a {
+    color:#E6E6E6;
+   
+    height: 10px;
+    
+    text-decoration: none;
+    
+    font-size: 15px;
+    font-family: "Georgia";
+    background-color:#40464B;
+    width:150px;
+}
+
+.settings-content a:hover{
+    color:#40464B;
+    background-color: #E6E6E6;
+    
+    width:150px;
+}
+
+
+.settingsBut:hover .settings-content {
+    display: block;
+    color: #E6E6E6;
+  
+    
+}
+
+
+
+body{
+    margin:0;
+    background-color:#2B8AC2;
+    font-family: "Georgia";
+}
+
+.wrapper{
+    margin-bottom :100px;
+    display: inline-block;
+    width:100%;
+
+}
+
+
+
+label{
+  font-size: 18px;
+}
+
+
+
+
+--------razvan css----------
+
+
+.wrapper_tnt{
+  width:  100%;
+  height: 100%;
+}
+
+.firsthalf{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.lasthalf{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+
+.legendP{
+  width: 150px;
+  height: 150px;
+  
+  float: left;
+  
+}
+ 
+
+.legend{
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  color: white;
+}
+
+
+
+.container {
+  width: 500px;
+  height: 120px;
+  margin-bottom: 60px;
+  margin-left: 30px;
+  border-radius: 5px 40px 5px 5px;
+  float:left;
+  
+}
+
+.sqH{
+  width: 100%;
+  height: 33.33%;
+  background-color: red;
+  border-radius: 40px 40px 0px 0px;
+}
+.sqM{
+  width: 100%;
+  height: 33.33%;
+  background-color: orangered;
+  border-radius: 0px 0px 0px 0px;
+
+}
+.sqE{
+  width: 100%;
+  height: 33.33%;
+  background-color: orange;
+  border-radius: 0px 0px 40px 40px;
+}
+
+
+.hrd{
+  width: 100%;
+  height: 33.33%;
+  border-bottom: 2px solid peachpuff;
+
+}
+
+.mdm{
+   width: 100%;
+  height: 33.33%;
+  border-bottom: 2px solid peachpuff;
+}
+.esy{
+   width: 100%;
+  height: 33.33%;
+  border-bottom: 2px solid peachpuff;
+}
+
+
+.t {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
+ 
+
+}
+
+.mhard {width: 11.3%; }
+.mmedium {width: 3%; }
+.measy {width: 6.5%; }
+
+.ghard {width: 0.67%; }
+.gmedium {width: 21.17%; }
+.geasy {width: 12.3%; }
+
+.hhard {width: 8.6%; }
+.hmedium {width: 6.12%; }
+.heasy {width: 13.56%; }
+
+.bhard {width: 35.17%; }
+.bmedium {width: 12.15%; }
+.beasy {width: 6%; }
+
+.ehard {width: 8.6%; }
+.emedium {width: 1.56%; }
+.eeasy {width: 17%; }
+
+.h{background-color: red;border-radius: 40px 0px 0px 0px;}
+.m{background-color: orangered;}
+.e{background-color: orange;}
