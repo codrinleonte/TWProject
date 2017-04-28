@@ -103,7 +103,7 @@ ul.mail-list li span.mail-message-preview{
 
 
 html { 
-  background: url("../imagini/hminion.jpg") no-repeat center center fixed; 
+  background: url("../images/hminion.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -133,7 +133,7 @@ html {
 
 }
 .top-logo{
-  background-image: url("../imagini/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -190,7 +190,7 @@ html {
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("../imagini/FEZ-04-512.png");
+    background: url("../images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  

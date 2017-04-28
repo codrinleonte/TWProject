@@ -1,3 +1,4 @@
+
 html, body{
    height: 100%;
    margin:0;
@@ -177,19 +178,151 @@ html {
 }
 
 
-.wrapper{
-    margin-bottom :100px;
-    display: inline-block;
-    width:100%;
 
+.wrapper{
+     height:80% !important;
 }
+
 .t1 {
         color: white; 
         text-shadow: black 0.1em 0.1em 0.2em;
 		float: left;
-		margin-left:130px;
-		margin-top:200px;
+		margin-left:50px;
+		margin-top:40px;
 		font-size: 24px;
+		position:fixed;
     }
 
 	
+
+.scores{
+	    background-color:#800000; 
+	 opacity: 0.97;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	cursor: pointer;
+	margin-top:20px;
+	margin-right: 20px;
+	width:200px;
+	height:100px;
+}
+
+.butoane{
+
+  display: inline-block;
+    width: 200px;
+    height: 200px;
+   margin-left:10px;
+    float:left;
+	margin-top:100px;
+	margin-right: 15px;
+	position:fixed;
+ border-radius:  5px 5px 50px 50px;
+    
+}
+.table-content{
+	width:1000px;
+height:500px;
+margin-left:290px;
+margin-top:150px;
+	
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+	opacity: 0.97;
+	  background-color: #800000;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child {
+    background-color: #800000;
+}
+.button {
+    background-color:  #4d0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	position:center:
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.hrd{
+  width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+
+}
+
+.mdm{
+   width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+}
+.esy{
+   width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+}
+
+
+.t {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 47px;
+  color: white;
+ 
+
+}
+.name{
+	
+	 padding-right: 20px;
+  line-height: 47px;
+  color: white;
+   font-size: 20px;
+}
+
+
+.firsthalf{
+  width:1000px;
+height:1000px;
+margin-left:290px;
+margin-top:50px;
+
+}
+
+.mhard {width: 20%; }
+
+
+.ghard {width: 34; }
+
+
+.hhard {width: 16%; }
+
+.bhard {width: 7%; }
+
+
+.ehard {width: 23%; }
+
+
+.h{background-color: red;border-radius: 40px 0px 0px 0px;}
+.m{background-color: orangered;}
+.e{background-color: orange;}
