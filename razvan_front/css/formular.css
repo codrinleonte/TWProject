@@ -1,0 +1,446 @@
+
+html, body{
+  margin: 0;
+  min-height: 100%;
+  background-color: #2b8ac2;
+}
+.parallax {
+  
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.top-nav {
+
+  overflow: hidden;
+  background-color: #40464B;
+  height:60px;
+
+}
+
+
+.top-nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.top-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+.top-nav a:active {
+
+    color: white;
+
+}
+.footer{
+  top: 100%;
+  position: relative;
+}
+
+.bottom-second-bar {
+    text-align: center;
+    background-color:  #40464B;
+    height: 50px;
+    width:100%;
+    z-index: 100;
+    top: 100%;
+    bottom: 0; 
+    left: 0;
+}
+
+.bottom-second-bar-label{
+    margin-left:100px;
+    color:white;
+    font-size: 15px;
+    font-family: "Georgia";
+    margin: 0 auto;
+}
+
+
+.bottom-first-bar {
+    background-color:  #384452;
+    height: 300px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
+  float:left;
+  margin: 0 auto;
+  overflow:hidden;
+  width: 24%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.first_bottom_column{
+  margin-left: 3%;
+  float:left;
+}
+
+.bottom-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:300px;
+  height:150px;
+
+}
+
+
+.bottom_column_label{
+  height: 400px;
+  color:white;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Georgia";
+  margin: 0 auto;
+  
+}
+
+
+.wrapper{
+     height:auto !important;
+     min-height:100%;
+}
+
+
+
+
+.dropbtn {
+  
+    padding: 10px 12px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background: url("../images/FEZ-04-512.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.settingsBut {
+    float:right;
+  
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.settings-content {
+    display: none;
+    position: absolute;
+    width:150px;
+    
+    z-index: 1;
+    background-color:#40464B;
+   
+}
+
+.settings-content a {
+    color:#E6E6E6;
+   
+    height: 10px;
+    
+    text-decoration: none;
+    
+    font-size: 15px;
+    font-family: "Georgia";
+    background-color:#40464B;
+    width:150px;
+}
+
+.settings-content a:hover{
+    color:#40464B;
+    background-color: #E6E6E6;
+    
+    width:150px;
+}
+
+
+.settingsBut:hover .settings-content {
+    display: block;
+    color: #E6E6E6;
+  
+    
+}
+
+.top-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:120px;
+  height:60px;
+  margin-left: 5%;
+  float:left;
+  cursor: pointer;
+}
+
+
+
+
+ .socialItems a{  
+    display: inline-block;
+    margin-top: 20px;
+    width: 30px ;
+    height: 30px;
+    background-color: #40464B;
+    border-radius: 10px;
+    transition:background-color 1s;
+}
+
+
+.fb:hover{
+  background-color: #3B5998;
+}
+
+.google:hover{
+  background-color: #D75030;
+}
+.tweet:hover{
+  background-color: #55ACEE;
+}
+
+.feed:hover{
+  background-color: #F69A1D;
+}
+
+
+.socialFb,.socialTweet,.socialFeed,.socialGoogle{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.bottom-nav {
+
+ 
+
+}
+
+
+.bottom-nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.bottom-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+
+
+/*------css razvan---------*/
+
+
+
+.button {
+  display: none;
+  border-radius: 4px;
+  background-color: gold;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 1000px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+h3{
+
+
+  color: gold;
+  text-decoration: overline;
+}
+input{
+	border-radius: 10px;
+	font-family: "Georgia";
+	width: 300px;
+	height: 50px;
+}
+
+textarea{
+
+    resize: none;
+	border-radius: 10px;
+	font-family: "Georgia";
+    width: 100%;
+    height: 100%;
+    font-size: 20px; 
+   
+  
+ }
+ .question{
+ 
+     margin-left:50px;
+     margin-top:80px;
+     width:500px;
+     height: 170px;
+     float: left;
+ }
+
+.answer{
+	
+ 	 margin-left:50px;
+     margin-top:50px;
+     width:300px;
+     float: left;
+}
+
+.save{
+	
+    margin-top: 268px;
+    width: 70px;
+    height: 60px;
+    background-color: green;
+    border-radius:  40px 10px 40px 10px;
+    margin-left: 908px;
+}
+
+.saves{
+	width: 100%;
+    height: 100%;
+     border-radius:  40px 10px 40px 10px;
+}
+
+.formular{
+	 width:75%;
+     height:325px;
+  float: left;
+   border-radius:  40px 10px 40px 10px;
+   margin-bottom: 30px;
+   background: linear-gradient(  #6685ff,  #0033ff);  
+
+}
+
+.formular1{
+	width:75%;
+    height:325px;
+    float: left;
+    margin-left: 260px;
+     border-radius:  40px 10px 40px 10px;
+     margin-bottom: 30px;
+    display:none;
+    background: linear-gradient(  #6685ff,  #0033ff); 
+
+ 
+
+}
+
+
+.container{
+overflow:hidden;
+width:1300px;
+margin-top: 4%;
+
+}
+
+.domain{
+   font-family: "Georgia";
+   float:left;
+   font-size: 20px;  
+   width:245px;
+   margin-right: 15px;
+   
+    border-radius:  5px 5px 50px 50px;
+    color: #FFFFFF;
+     background: linear-gradient(  #6685ff,  #0033ff);  
+}
+ input[type='radio'] {
+  -webkit-appearance:none;
+  width:25px;
+  height:25px;
+  border:1px solid darkgray;
+  border-radius:50%;
+  outline:none;
+  box-shadow:0 0 5px 0px grey inset;
+  vertical-align: bottom;
+  transition:box-shadow 1s;
+
+
+}
+
+input[type='radio']:hover {
+  box-shadow:0 0 5px 0px  white inset;
+}
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:60%;
+  height:60%;
+  margin: 20% auto;    
+  border-radius:50%;  
+  transition:background 1s;  
+}
+
+input[type='radio']:checked:before {
+  background:gold;
+}
+
+
+
+
+
