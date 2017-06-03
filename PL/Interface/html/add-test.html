@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../../../public/css/style.css">
+	<script src="../../../public/javascript/formular.js"></script>
+
+</head>
+
+<body> 
+ <div class="wrapper">
+	<div class = "pageWrap">
+	<div class = "top-nav">
+	<div class = "top-logo" onclick=location.href='admin-first-page.html'></div>
+	<div class = "settingsBut">
+		<button class="dropbtn"></buton>
+		<div class = "settings-content">
+			<a href = "change-password.html">Change password</a><br>
+			<a href = "login.html">Logout</a>
+		</div>
+	</div>
+	<a href = "statistics.html">Statistics</a>
+	<a href = "add-test.html">Add new test</a>
+	<a href = "notification.html">Notification</a>
+	<a href = "admin-first-page.html">Home</a>
+	
+</div>
+</div>
+  
+
+<div class ="container">
+        <div class ="domain" id="grad1">
+        <h3>Choose domain</h3>
+         <p><input type="radio" name="domain" value="math" required><b>Math</b></p>
+         <p><input type="radio" name="domain" value="biology" required><b> Biology</b></p>
+         <p><input type="radio" name="domain" value="geography" required><b> Geography</b></p>
+         <p><input type="radio" name="domain" value="history" required><b> History</b></p>
+         <p><input type="radio" name="domain" value="english" required><b> English</b></p>
+        </div>
+        <div class = "formular" >
+
+            <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the first question..." required></textarea>
+            </div>
+            <div class = "answer" >    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q1')">Save</button>
+                
+            </div>
+			</div>
+			<div class = "formular1"   id="q1" >
+
+            <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the second question..." required></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q2')">Save</button>
+            </div>
+        </div> 
+         <div class = "formular1" id="q2">
+
+           <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the third question..." required></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q3')">Save</button>
+            </div>            
+        </div> 
+         <div class = "formular1" id="q3">
+
+            <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the fourth question..."></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q4')">Save</button>
+            </div>
+            
+        </div> 
+         <div class = "formular1" id="q4">
+
+            <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the fifth question..." required></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q5')">Save</button>
+            </div>
+            
+        </div> 
+         <div class = "formular1" id="q5">
+
+           <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the sixth question..." required></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+            <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('q6')">Save</button>
+            </div>
+            
+        </div>   
+        <div class = "formular1" id="q6">
+
+            <div class ="question">
+                <textarea maxlength="400"  placeholder="Enter the seventh question..." required></textarea>
+            </div>
+            <div class = "answer">    
+                <textarea maxlength="50"  placeholder="Enter the good answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+                <textarea maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
+            </div>
+             <div class="save">
+                <button class="saves" type="submit" name ="save" onclick="showDiv('btn')">Save</button>
+            </div>
+            
+        
+
+        <button id = "btn"  type = "submit" class="button" style="vertical-align:middle"><span>Send </span></button>
+    </div>  
+    </div>
+
+
+	</div>
+	
+	
+	
+ 
+</body>
+</html>

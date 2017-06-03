@@ -1,0 +1,472 @@
+html, body{
+  margin: 0;
+  min-height: 100%;
+  background-color: #2b8ac2;
+}
+.parallax {
+  
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.top-nav {
+
+  overflow: hidden;
+  background-color: #40464B;
+  height:60px;
+
+}
+
+
+.top-nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.top-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+.top-nav a:active {
+
+    color: white;
+
+}
+.footer{
+  top: 176%;
+  position: relative;
+}
+
+.bottom-second-bar {
+    text-align: center;
+    background-color:  #40464B;
+    height: 50px;
+    width:100%;
+    z-index: 100;
+    top: 100%;
+    bottom: 0; 
+    left: 0;
+}
+
+.bottom-second-bar-label{
+    margin-left:100px;
+    color:white;
+    font-size: 15px;
+    font-family: "Georgia";
+    margin: 0 auto;
+}
+
+
+.bottom-first-bar {
+    background-color:  #384452;
+    height: 300px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
+  float:left;
+  margin: 0 auto;
+  overflow:hidden;
+  width: 24%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.first_bottom_column{
+  margin-left: 3%;
+  float:left;
+}
+
+.bottom-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:300px;
+  height:150px;
+
+}
+
+
+.bottom_column_label{
+  height: 400px;
+  color:white;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Georgia";
+  margin: 0 auto;
+  
+}
+
+
+.wrapper{
+     height:auto !important;
+     min-height:100%;
+}
+
+
+
+
+.dropbtn {
+  
+    padding: 10px 12px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background: url("../images/FEZ-04-512.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.settingsBut {
+    float:right;
+  
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.settings-content {
+    display: none;
+    position: absolute;
+    width:150px;
+    
+    z-index: 1;
+    background-color:#40464B;
+   
+}
+
+.settings-content a {
+    color:#E6E6E6;
+   
+    height: 10px;
+    
+    text-decoration: none;
+    
+    font-size: 15px;
+    font-family: "Georgia";
+    background-color:#40464B;
+    width:150px;
+}
+
+.settings-content a:hover{
+    color:#40464B;
+    background-color: #E6E6E6;
+    font-size: 15px;
+    width:150px;
+}
+
+
+.settingsBut:hover .settings-content {
+    display: block;
+    color: #E6E6E6;
+  
+    
+}
+
+.top-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:120px;
+  height:60px;
+  margin-left: 5%;
+  float:left;
+  cursor: pointer;
+}
+
+
+
+
+ .socialItems a{  
+    display: inline-block;
+    margin-top: 20px;
+    width: 30px ;
+    height: 30px;
+    background-color: #40464B;
+    border-radius: 10px;
+    transition:background-color 1s;
+}
+
+
+.fb:hover{
+  background-color: #3B5998;
+}
+
+.google:hover{
+  background-color: #D75030;
+}
+.tweet:hover{
+  background-color: #55ACEE;
+}
+
+.feed:hover{
+  background-color: #F69A1D;
+}
+
+
+.socialFb,.socialTweet,.socialFeed,.socialGoogle{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.bottom-nav {
+
+ 
+
+}
+
+
+.bottom-nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.bottom-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+
+/*   --------  Razvan css --------  */
+.tnt{
+  width:  100%;
+  height: 100%;
+}
+
+.firsthalf{
+  width: 50%;
+  height: 100%;
+  float: left;
+
+}
+
+
+.title{
+  float:right;
+  width: 100%;
+  height: 10%;
+  text-align: right;
+  font-size: 50px;
+  background: -webkit-linear-gradient(green, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+   margin-top: 50px;
+   margin-bottom: 100px;
+   font-family: cursive;
+   font-weight: bold;
+   border-bottom: 7px solid peachpuff;
+}
+
+
+
+
+.container {
+  width: 500px;
+  height: 160px;
+  border-radius: 5px 40px 5px 5px;
+  float:left;
+ 
+}
+
+
+.a{
+    margin-bottom: 100px;
+    margin-left: 30px;
+}
+
+.b{
+   margin-bottom: 100px;
+  margin-left: 100px;
+}
+
+.sqH{
+  width: 100%;
+  height: 33.33%;
+  background-color: red;
+  border-radius: 5px 5px 0px 0px;
+}
+.sqM{
+  width: 100%;
+  height: 33.33%;
+  background-color: orangered;
+  border-radius: 0px 0px 0px 0px;
+
+}
+.sqE{
+  width: 100%;
+  height: 33.33%;
+  background-color: orange;
+  border-radius: 0px 0px 40px 40px;
+}
+
+
+.hrd{
+  width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+
+}
+
+.mdm{
+   width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+}
+.esy{
+   width: 100%;
+  height: 32%;
+  border-bottom: 2px solid peachpuff;
+}
+
+
+.t {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 47px;
+  color: white;
+ 
+
+}
+
+.mhard {width: 11.3%; }
+.mmedium {width: 3%; }
+.measy {width: 6.5%; }
+
+.ghard {width: 0.67%; }
+.gmedium {width: 21.17%; }
+.geasy {width: 12.3%; }
+
+.hhard {width: 8.6%; }
+.hmedium {width: 6.12%; }
+.heasy {width: 13.56%; }
+
+.bhard {width: 35.17%; }
+.bmedium {width: 12.15%; }
+.beasy {width: 6%; }
+
+.ehard {width: 8.6%; }
+.emedium {width: 1.56%; }
+.eeasy {width: 17%; }
+
+.h{background-color: red;border-radius: 40px 0px 0px 0px;}
+.m{background-color: orangered;}
+.e{background-color: orange;}
+
+.name{
+ height: 14%;
+ width: 100px;
+ background-color: peachpuff;
+ float: right;
+ border-radius: 0px 0px 40px 0px;
+ font-size: 100%;
+ color:#ff3300;
+ text-align: center;
+}
+
+
+
+.lasthalf{
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+
+.legendP{
+  width: 40%;
+  height: 250px;
+  
+  margin-left: 18%;
+ 
+  
+}
+ 
+
+.nameL{
+  height: 90px;
+ width: 35%;
+ background-color: peachpuff;
+ border-radius: 50px 50px 5px 5px;
+ font-size: 100%;
+ color:#ff3300;
+ text-align: center;
+ margin-top: 35%;
+ margin-left: 25.5%;
+ margin-bottom: 5px;
+ padding: 5px 5px 5px 5px;
+}
+
+
+.legend{
+  width: 70%;
+  height: 150px;
+  text-align: center;
+  color: white;
+  float: right;
+  
+}
+
+
+
+
+.img{
+   width: 150px;
+   height: 133px;
+   float: left;
+   background-image: url("../images/sponge2.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-top:60px;
+    position: absolute;
+  
+ }
+
+.img1{
+   width: 500px;
+   height: 516px;
+   float: right;
+   background-image: url("../images/source.gif");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-top: 45%;
+}
+  
+  
+ .cookie{
+  margin-top: 23%;
+  float: left;
+ }

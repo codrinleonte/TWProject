@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="../../../public/css/statistics.css">
+	<script src="../../../public/javascript/functii.js"></script>
+	
+</head>
+
+<body> 
+
+	<div class = "pageWrap">
+	<div class = "top-nav">
+	<div class = "top-logo"></div>
+	<div class = "settingsBut">
+		<button class="dropbtn"></buton>
+		<div class = "settings-content">
+			<a href = "change-password.html">Change password</a><br>
+			<a href = "login.html">Logout</a>
+		</div>
+	</div>
+	<a href = "statistics.html">Statistics</a>
+	<a href = "add-test.html">Add new test</a>
+	<a href = "notification.html">Notification</a>
+	<a href = "admin-first-page.html">Home</a>
+	
+</div>
+</div>
+ 
+    <div class="wrapper">
+        
+		    <span class="t1">See what's going on!</span><br>
+                   <div class="butoane">
+					<button class="scores" type="submit" onclick="ShowScores()">Scores</button>
+					<button class="scores" type="submit"  onclick="ShowKids()">Kids List</button>
+					<button class="scores" type="submit" onclick="ShowParents()">Parents List</button>
+					<button class="scores" type="submit"  onclick="Distribution()">Test's Distribution</button>
+				</div>
+				<div id="getScores" style="display:none;" class="table-content">
+                       <table>
+                        <tr>
+                          <th>Name</th>
+                          <th>Domain</th>
+                          <th>Score</th>
+                        </tr>
+                        <tr>
+                          <td>Florea Mihai</td>
+                          <td>Math</td>
+                          <td>70</td>
+                        </tr>
+                        <tr>
+                          <td>Lucaci Camelia</td>
+                          <td>Biology</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                          <td>Samson Diana</td>
+                          <td>Byology</td>
+                          <td>50</td>
+                        </tr>
+                        <tr>
+                          <td>Popescu Robert</td>
+                          <td>History</td>
+                          <td>60</td>
+                      </tr>
+                      </table>
+      			</div>
+				<div id="getKids" style="display:none;" class="table-content">
+				<table>
+                        <tr>
+                          <th>Name</th>
+                          <th><a href="#" class="button">Delete</a></th>
+                          
+                        </tr>
+                        <tr>
+                          <td>Florea Mihai</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Lucaci Camelia</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Samson Diana</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Popescu Robert</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                      </tr>
+                      </table>
+				</div>
+				<div id="getParents" style="display:none;" class="table-content">
+				<table>
+                        <tr>
+                          <th>Name</th>
+                          <th><a href="#" class="button">Delete</a></th>
+                          
+                        </tr>
+                        <tr>
+                          <td>Florea Mircea</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Lucaci Tudor</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Samson David</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                        </tr>
+                        <tr>
+                          <td>Popescu Sabin</td>
+                          <td><a href="#" class="button">Delete</a></td>
+                      </tr>
+                      </table>
+				</div>
+				   
+                   	<div id="getDis" style="display:none;">
+					<div class="firsthalf">
+              
+                  <div class="container a">
+                   
+                    <div class="hrd">
+					
+                       <div class="t mhard h">20%</div>
+                    </div>
+                    
+                    
+                    <div class="name">Math</div>
+                  </div>
+				  <br>
+ 
+                  <div class="container b">
+                    <div class="hrd">
+                      <div class="t ghard h">34%</div>
+                    </div>
+                    
+                    <div class="name">Geography</div>
+                  </div>
+				  <br>
+
+                  <div class="container a">              
+                    <div class="hrd">
+                      <div class="t hhard h">16%</div>
+                    </div>
+                   
+                    <div class="name">History</div>
+                  </div>
+
+                  <br>
+                  <div class="container b">
+                    <div class="hrd">
+                      <div class="t bhard h"> 7%</div>
+                    </div>
+                    
+                    <div class="name">Biology</div>
+                  </div>
+
+                  <br>
+                  <div class="container a">
+                    <div class="hrd">
+                      <div class="t ehard h">23%</div>
+                    </div>
+                  
+                    <div class="name">English</div>
+                  </div>
+
+                </div>
+				</div>
+
+				  
+				   
+		 
+		 
+				  
+              
+
+</body>
+</html>

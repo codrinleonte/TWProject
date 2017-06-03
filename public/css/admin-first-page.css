@@ -1,0 +1,196 @@
+html, body{
+   height: 100%;
+   margin:0;
+}
+html { 
+  background: url("../images/hminion.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.wrapper{
+     height:80% !important;
+}
+.top-nav {
+
+  overflow: hidden;
+  background-color: #40464B;
+  margin-top:0px;
+
+
+}
+.top-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:150px;
+  height:60px;
+  margin-left: 3%;
+  float:left;
+  cursor:pointer;
+}
+.bottom-second-bar {
+  text-align: center;
+    background-color:  #40464B;
+    height: 50px;
+    width:100%;
+	position: absolute;
+    z-index: 100;
+    top: 100%;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+}
+
+.top-nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s;
+
+}
+
+.top-nav a:hover {
+  
+  color: #00B3FE;
+}
+
+.top-nav a:active {
+
+    color: white;
+
+}
+
+
+.bottom-label{
+    margin-left:100px;
+    color:white;
+    font-size: 15px;
+    font-family: "Georgia";
+}
+
+.bottom-first-bar {
+   
+    background-color:  #384452;
+    height: 300px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
+  float:left;
+  margin-left: 100px;
+  overflow:hidden;
+  
+}
+
+.first_bottom_column{
+
+  width:300px;
+  height:300px;
+ 
+}
+.second_bottom_column{
+  
+   width:120px;
+}
+.third_bottom_column{
+
+} 
+.fourth_bottom_column{
+
+}
+
+.bottom_column_label{
+  height: 300px;
+  color:white;
+  font-size: 15px;
+  font-family: "Georgia";
+  margin-bottom:100px; 
+  display:table-cell;
+}
+
+.dropbtn {
+  
+    padding: 10px 12px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background: url("../images/FEZ-04-512.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.settingsBut {
+    float:right;
+  
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.settings-content {
+    display: none;
+    position: absolute;
+    width:150px;
+    
+    z-index: 1;
+    background-color:#40464B;
+   
+}
+
+.settings-content a {
+    color:#E6E6E6;
+   
+    height: 10px;
+    
+    text-decoration: none;
+    
+    font-size: 15px;
+    font-family: "Georgia";
+    background-color:#40464B;
+    width:150px;
+}
+
+.settings-content a:hover{
+    color:#40464B;
+    background-color: #E6E6E6;
+    
+    width:150px;
+}
+
+
+.settingsBut:hover .settings-content {
+    display: block;
+    color: #E6E6E6;
+  
+    
+}
+
+
+.wrapper{
+    margin-bottom :100px;
+    display: inline-block;
+    width:100%;
+
+}
+.t1 {
+        color: white; 
+        text-shadow: black 0.1em 0.1em 0.2em;
+		float: left;
+		margin-left:130px;
+		margin-top:200px;
+		font-size: 24px;
+    }
+
+	

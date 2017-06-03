@@ -1,0 +1,522 @@
+html, body{
+  margin: 0;
+  min-height: 100%;
+  background-color: #2b8ac2;
+}
+.parallax {
+  
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.top-nav {
+
+  overflow: hidden;
+  background-color: #40464B;
+  height:60px;
+
+}
+
+
+.top-nav a {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.top-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+.top-nav a:active {
+
+    color: white;
+
+}
+.footer{
+  top: 20%;
+  position: relative;
+}
+
+.bottom-second-bar {
+    text-align: center;
+    background-color:  #40464B;
+    height: 50px;
+    width:100%;
+    z-index: 100;
+    top: 100%;
+    bottom: 0; 
+    left: 0;
+}
+
+.bottom-second-bar-label{
+    margin-left:100px;
+    color:white;
+    font-size: 15px;
+    font-family: "Georgia";
+    margin: 0 auto;
+}
+
+
+.bottom-first-bar {
+    background-color:  #384452;
+    height: 300px;
+    width:100%;
+    position:relative;
+    left: 0;
+    bottom: 0; 
+   
+}
+
+.first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
+  float:left;
+  margin: 0 auto;
+  overflow:hidden;
+  width: 24%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.first_bottom_column{
+  margin-left: 3%;
+  float:left;
+}
+
+.bottom-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:300px;
+  height:150px;
+
+}
+
+
+.bottom_column_label{
+  height: 400px;
+  color:white;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Georgia";
+  margin: 0 auto;
+  
+}
+
+
+.wrapper{
+     height:auto !important;
+     min-height:100%;
+}
+
+
+
+
+.dropbtn {
+  
+    padding: 10px 12px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    background: url("../images/FEZ-04-512.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;  
+}
+
+.settingsBut {
+    float:right;
+  
+    margin-right: 200px;
+    margin-left: 10px;
+}
+
+.settings-content {
+    display: none;
+    position: absolute;
+    width:150px;
+    
+    z-index: 1;
+    background-color:#40464B;
+   
+}
+
+.settings-content a {
+    color:#E6E6E6;
+   
+    height: 10px;
+    
+    text-decoration: none;
+    
+    font-size: 15px;
+    font-family: "Georgia";
+    background-color:#40464B;
+    width:150px;
+}
+
+.settings-content a:hover{
+    color:#40464B;
+    background-color: #E6E6E6;
+    font-size: 15px;
+    width:150px;
+}
+
+
+.settingsBut:hover .settings-content {
+    display: block;
+    color: #E6E6E6;
+  
+    
+}
+
+.top-logo{
+  background-image: url("../images/logo.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  width:120px;
+  height:60px;
+  margin-left: 5%;
+  float:left;
+  cursor: pointer;
+}
+
+
+
+ .socialItems a{  
+    display: inline-block;
+    margin-top: 20px;
+    width: 30px ;
+    height: 30px;
+    background-color: #40464B;
+    border-radius: 10px;
+    transition:background-color 1s;
+}
+
+
+.fb:hover{
+  background-color: #3B5998;
+}
+
+.google:hover{
+  background-color: #D75030;
+}
+.tweet:hover{
+  background-color: #55ACEE;
+}
+
+.feed:hover{
+  background-color: #F69A1D;
+}
+
+
+.socialFb,.socialTweet,.socialFeed,.socialGoogle{
+  width: 30px;
+  height: 30px;
+}
+
+
+
+.bottom-nav {
+
+ 
+
+}
+
+
+.bottom-nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Georgia";
+  transition:  color 1s, background-color 1s , font-size 1s;
+  
+}
+
+.bottom-nav a:hover {
+  
+  color:#6680CC;
+  font-size:19px;
+}
+
+
+
+/*--------razvan css----------*/
+
+.wrapper{
+    margin-bottom :100px;
+    display: inline-block;
+    width:100%;
+    height: 100%; 
+    margin-bottom: 10px;
+
+}
+.img{
+   width: 300px;
+   height: 141px;
+   position: relative;
+   margin: 0 auto;
+   background-image: url("../images/simpson.png");
+  
+}
+
+
+.firsthalf{
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  height: 30%;
+
+}
+
+.lasthalf{
+  width: 100%;
+  height: 50%;
+   position: relative;
+  margin: 0 auto;
+}
+
+.buton{
+
+    display: inline-block;
+    width: 170px;
+    height: 160px;
+   
+    
+
+    border: none;
+    color: white;
+   
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    
+}
+
+
+.buton:hover {
+    box-shadow: 0 13px 16px 0 rgba(0,0,0,0.5),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.your{
+  border-radius: 10px 5px 5px 70px;
+}
+.other{
+   border-radius: 5px 5px 5px 5px;
+}
+.all{
+  border-radius: 5px 10px 70px 5px;
+}
+
+
+.yourkidbtn{
+  width: 100%;
+    height: 100%;
+
+     border-radius: 10px 5px 5px 70px;
+     padding: 20px 16px;
+     text-decoration: none;
+     font-size: 22px;
+     font-family: "Georgia";
+     color: steelblue;
+     
+}
+
+.otherkidbtn{
+  width: 100%;
+    height: 100%;
+     border-radius: 5px 5px 5px 5px;
+     padding: 20px 16px;
+     text-decoration: none;
+     font-size: 22px;
+     font-family: "Georgia";
+     color: steelblue;
+}
+
+.allkidbtn{
+  width: 100%;
+    height: 100%;
+     border-radius: 5px 10px 70px 5px;
+     padding: 20px 16px;
+     text-decoration: none;
+     font-size: 22px;
+     font-family: "Georgia";
+     color: steelblue;
+}
+
+.tabel{
+  width: 100%;
+  height: 100%;
+  
+   
+    margin-top: 10%;
+   
+}
+
+.tabelos{
+  margin-top:200px;
+  width:44%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.pageNavPosition{
+  display: none;
+}
+
+.img5{
+   width: 100px;
+   height: 340px;
+   float: left;
+   background-image: url("../images/bugs.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-left: 274px;
+    display: none;
+ }
+
+ .img6{
+   width: 300px;
+   height: 171px;
+   float: right;
+   background-image: url("../images/daffy.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-right: 80px;
+    display: none;
+ }
+
+
+.pg-normal {
+      cursor: pointer;
+      
+      padding: 8px 16px;
+      background: linear-gradient(#025d8c,#01537e);
+      display: inline-block;
+      border-radius: 5px 5px 5px 5px;
+
+      }
+
+.pg-normal:hover {
+    box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.4s;
+    color:#fff;
+   }   
+.pg-selected {
+    color: white;
+     padding: 8px 16px;
+    font-weight: bold;        
+    background: linear-gradient(red, black);
+    cursor: pointer;
+    border-radius: 50%;
+    }
+ .prev{
+     border-radius: 5px 5px 5px 40px;
+      margin-left: 188px; 
+      
+ }
+
+ .next{
+   border-radius: 5px 5px 40px 5px;
+ }
+
+          
+table {
+    
+    width: 100%;
+  
+     position: relative;
+     margin: 0 auto;
+    display: none;
+    
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    height: 68.7px;
+
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(odd){background-color: #ddd}
+
+th {
+    background-color: slategray;
+    color: white;
+  
+}
+
+
+
+.boximg{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.img2{
+   width: 426px;
+   height: 492px;
+   float: left;
+   background-image: url("../images/sullivan.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+    margin-top: -20%
+   
+ }
+
+ .img3{
+   width: 315px;
+   height: 300px;
+   float: left;
+   position: relative;
+    border-radius: 50%;
+    background: linear-gradient(red, black);
+    text-align: center ;
+  font-size: 50px;
+  
+  color: #fff;
+   font-family: cursive;
+   font-weight: bold;
+   margin-left: 94px;
+    
+
+ }
+   .img3 p{
+      top: 50%;
+ }
+
+ .img4{
+   width: 486px;
+   height: 463px;
+   float: right;
+   background-image: url("../images/patrik.png");
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
+     margin-top: -20%
+ }
+
+
