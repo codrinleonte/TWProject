@@ -5,7 +5,7 @@ html, body{
 }
 .parallax {
   
-    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    background-image: url("/tw/public/images/4FPllju-cartoon-network-backgrounds.jpg");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
@@ -97,7 +97,7 @@ html, body{
 }
 
 .bottom-logo{
-  background-image: url("../images/logo.png");
+  background-image: url("/tw/public/images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -132,7 +132,7 @@ html, body{
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("../images/FEZ-04-512.png");
+    background: url("/tw/public/images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -184,7 +184,7 @@ html, body{
 }
 
 .top-logo{
-  background-image: url("../images/logo.png");
+  background-image: url("/tw/public/images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -273,7 +273,7 @@ html, body{
    height: 141px;
    position: relative;
    margin: 0 auto;
-   background-image: url("../images/simpson.png");
+   background-image: url("/tw/public/images/simpson.png");
   
 }
 
@@ -385,7 +385,7 @@ html, body{
    width: 100px;
    height: 340px;
    float: left;
-   background-image: url("../images/bugs.png");
+   background-image: url("/tw/public/images/bugs.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
@@ -397,7 +397,7 @@ html, body{
    width: 300px;
    height: 171px;
    float: right;
-   background-image: url("../images/daffy.png");
+   background-image: url("/tw/public/images/daffy.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
@@ -479,7 +479,7 @@ th {
    width: 426px;
    height: 492px;
    float: left;
-   background-image: url("../images/sullivan.png");
+   background-image: url("/tw/public/images/sullivan.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
@@ -512,11 +512,52 @@ th {
    width: 486px;
    height: 463px;
    float: right;
-   background-image: url("../images/patrik.png");
+   background-image: url("/tw/public/images/patrik.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
      margin-top: -20%
  }
 
+.dropbtntab {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtntaab:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdowntab {
+    float: right;
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-contenttab {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-contenttab a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdowntab a:hover {background-color: #f1f1f1}
+
+.showtab {display:block;}
 

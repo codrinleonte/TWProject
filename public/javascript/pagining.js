@@ -58,12 +58,14 @@ function Pager(tableName, itemsPerPage) {
             return;
         }
         var element = document.getElementById(positionId);
-        
-        var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal prev"> &#171 Prev </span> ';
-        for (var page = 1; page <= this.pages; page++) 
-            pagerHtml += '<span id="pg' + page + '" class="pg-normal" onclick="' + pagerName + '.showPage(' + page + ');">' + page + '</span> ';
-        pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal next"> Next &#187;</span>';            
-        
+
+        var pagerHtml = '    <div class="dropdowntab"> ' +
+                        '    <button onclick="myFunction()" class="dropbtntab">Dropdown</button>' +
+                        '    <div id="myDropdown" class="dropdown-contenttab">';
+        for (var page = 1; page <= this.pages; page++)
+
+            pagerHtml += ' <a  onclick="pager3.showPage(' + page + ')" > Page ' +page+ '</a> ';
+           pagerHtml += ' </div>  </div>'
         element.innerHTML = pagerHtml;
     }
 }

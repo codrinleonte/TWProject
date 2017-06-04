@@ -8,7 +8,7 @@ html, body{
 
 .parallax {
   
-    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
+    background-image: url("/tw/public/images/4FPllju-cartoon-network-backgrounds.jpg");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
@@ -99,7 +99,7 @@ html, body{
 }
 
 .bottom-logo{
-  background-image: url("../images/logo.png");
+  background-image: url("/tw/public/images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -134,14 +134,14 @@ html, body{
 }
 
 .clock_image{
-  content:url("../images/legal-information-8.png");
+  content:url("/tw/public/images/legal-information-8.png");
   width:50px;
   height: 50px;
     margin: 0 auto;
 }
 
 .trophy_image{
-  content:url("../images/Trophyicon_1198.png");
+  content:url("/tw/public/images/Trophyicon_1198.png");
   width:50px;
   height: 50px;
     margin: 0 auto;
@@ -149,7 +149,7 @@ html, body{
 
 
 .scores_podium_image{
-  content:url("../images/42913.png");
+  content:url("/tw/public/images/42913.png");
   width:250px;
   height:240px;
   margin: 0 auto;
@@ -157,13 +157,13 @@ html, body{
 }
 
 .test_image{
-  content :url("../images/83825-200.png");
+  content :url("/tw/public/images/83825-200.png");
   width:50px;
   height: 50px; 
   margin: 0 auto;
 }
 .tests_podium_image{
-  content:url("../images/testPod.png");
+  content:url("/tw/public/images/testPod.png");
   width:300px;
   height:200px;
   margin: 0 auto;
@@ -181,7 +181,7 @@ html, body{
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("../images/FEZ-04-512.png");
+    background: url("/tw/public/images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -230,7 +230,7 @@ html, body{
 
 body{
     margin:0;
-    background-image: url("../images/Mg7STPP.png");
+    background-image: url("/tw/public/images/Mg7STPP.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position: initial;
@@ -260,7 +260,7 @@ body{
 }
 
 .math{
-    background-image: url("../images/0kQ3aqr.jpg");
+    background-image: url("/tw/public/images/0kQ3aqr.jpg");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -273,7 +273,7 @@ body{
 
 }
 .biology{
-    background-image: url("../images/ClearBiologyLogo_0214.png");
+    background-image: url("/tw/public/images/ClearBiologyLogo_0214.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -293,7 +293,7 @@ body{
 }
 
 .geography{
-    background-image: url("../images/Geography-Logo.png");
+    background-image: url("/tw/public/images/Geography-Logo.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -318,7 +318,7 @@ body{
 }
 
 .english{
-    background-image: url("../images/06.png");
+    background-image: url("/tw/public/images/06.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -338,7 +338,7 @@ body{
 }
 
 .history{
-    background-image: url("../images/history.png");
+    background-image: url("/tw/public/images/history.png");
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
@@ -415,7 +415,7 @@ input[type='radio']:checked:before {
 
 
 .imageMed{
-    content:url("../images/Sonic_sonicx.png");
+    content:url("/tw/public/images/Sonic_sonicx.png");
     width: 300px ;
     height:350px;
     display:none;
@@ -461,7 +461,7 @@ input[type='radio']:checked:before {
 
 
 .top-logo{
-  background-image: url("../images/logo.png");
+  background-image: url("/tw/public/images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -569,7 +569,7 @@ th {
 
 .characterImage{
     float:left;
-    content:url("../images/yoda.png");
+    content:url("/tw/public/images/yoda.png");
     width:700px;
     height:650px;
     position:absolute;
@@ -746,7 +746,7 @@ th {
 }
 
 .scoreImage{
-    content: url(../images/mickey-mouse-png-33.png);
+    content: url(/tw/public/images/mickey-mouse-png-33.png);
     width: 33%;
     margin-right: 10%;
     position: relative;
@@ -789,7 +789,7 @@ float: none;
 margin-top: 40%;
 margin-left: 10%;
 
-background-image: url("../images/Share-on-Facebook.png");
+background-image: url("/tw/public/images/Share-on-Facebook.png");
 background-repeat:no-repeat;
 background-position:center;
 border-radius: 10px;
@@ -803,7 +803,7 @@ cursor: pointer;
 .tweetShareButton{
 margin-top: 5%;
 margin-left:40%;
-background-image: url("../images/TwitterShareButton.png");
+background-image: url("/tw/public/images/TwitterShareButton.png");
 background-repeat:no-repeat;
 background-size:cover;
 background-position:center;

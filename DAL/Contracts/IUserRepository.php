@@ -14,4 +14,5 @@ interface IUserRepository
     public function insert($user);
     public function update($user, $id);
     public function delete($id);
+    public function updatePassword($updates, $conditionParams);
 }

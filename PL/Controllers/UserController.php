@@ -18,17 +18,25 @@ class UserController extends BaseController
     }
 
     public function showLogin(){
-        $this->loadView("html/login");
+        $this->loadView("html/Shared/login");
     }
 
     public function profile(){
-        $this->loadView("html/kids-user-first-page");
+
+        if($_SESSION['user']['type'] == 1){
+            $template = "html/KidUser/kids-user-first-page";
+        }
+        else{
+            $template = "html/ParentsUser/parentsHome";
+        }
+        $this->loadView($template);
     }
 
     public function login(){
         
         $username = $this->getFromPost("username");
         $password = $this->getFromPost("password");
+        $type = $this->getFromPost("userType");
 
        // echo($username . " " . $password);
        // echo("\n");
@@ -37,6 +45,7 @@ class UserController extends BaseController
         if($user = $this->userBll->checkKidsLogin($username, $password)){
 
             $_SESSION['user'] = $user[0];
+            $_SESSION['user']['type']=$type;
             $this->redirect("user/profile");
 //            $this->loadView("html/kids-user-first-page");
 

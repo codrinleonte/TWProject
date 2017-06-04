@@ -24,4 +24,8 @@ class UserBLL implements IUserBLL
 //        $user = $this->userRepo->getOneWhere("username = :username and pass= :pass", array("username"=>"patras.scortanu", "pass" => "PATRAS1"));
         return $user?$user:false;
     }
+
+    public function updateKidPassword(){
+
+    }
 }

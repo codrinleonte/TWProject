@@ -54,4 +54,10 @@ class KidsUsersRepository implements IKidsUsersRepository
     {
         return $this->oracleDB->deleteRow($this->table, "id=:id", array("id"=>$id));
     }
+
+    public function updatePassword($updates, $conditionParams)
+    {
+        return $this->oracleDB->updateRow($this->table,$updates, $conditionParams);
+    }
+
 }

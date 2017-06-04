@@ -18,7 +18,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-    background: url(../images/btn.gif);
+    background: url(/tw/public/images/btn.gif);
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: 0 0;
@@ -38,7 +38,7 @@ button {
 	margin-left : 80%;
 }
 body {
-    background-image: url("../images/BACKGROUND.png");
+    background-image: url("/tw/public/images/BACKGROUND.png");
     background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center;

@@ -11,6 +11,6 @@ class WelcomeController extends BaseController
 {
     public function index(){
 
-        $this->loadView("html/login");
+        $this->loadView("html/Shared/login");
     }
 }

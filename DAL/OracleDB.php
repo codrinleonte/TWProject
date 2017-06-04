@@ -31,6 +31,8 @@ class OracleDB
     }
 
     public function doQuery($query, $params){ //params = array('id'=>2)
+        echo $query;
+        echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
 //        print_r($query);print_r($params);exit();
