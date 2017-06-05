@@ -11,8 +11,7 @@ include ("DAL/Implementations/DomainsRepository.php");
 class DomainsBLL implements IDomainsBLL
 {
     private $repo;
-    public function __construct()
-    {
+    public function __construct(){
         $this->repo = new DomainsRepository();
     }
 

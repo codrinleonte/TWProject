@@ -9,7 +9,6 @@
 
 class OracleDB
 {
-
     private $username = "JFK";
     private $password = "JFK";
     private $connectionString = "localhost";
@@ -31,11 +30,11 @@ class OracleDB
     }
 
     public function doQuery($query, $params){ //params = array('id'=>2)
-        echo $query;
-        echo $params;
+       // echo $query;
+       // echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
-//        print_r($query);print_r($params);exit();
+       // print_r($query);print_r($params);
         if(!empty($params)){
             foreach($params as $paramName=>$paramValue){
                 oci_bind_by_name($stid, ":".$paramName, $params[$paramName]); //
@@ -50,13 +49,18 @@ class OracleDB
 //        var_dump($res);
     }
 
-    public function getRows($table, $fields, $conditionString, $conditionParams, $join =""){
+    public function getRows($table, $fields, $conditionString, $conditionParams, $join ="", $limit = 0, $offset=0, $orderBy="", $groupBy=""){
         $where = "";
         if($conditionString != '' && !empty($conditionParams)){
             $where = "where {$conditionString}";
         }
-        $query = "SELECT {$fields} from {$table} {$join} {$where}";
-
+        $limit = $limit!=0?"limit {$limit}":"";
+        $offset = $offset!=0?"offset {$offset}":"";
+        if($orderBy != "")
+            $orderBy = "order by {$orderBy}";
+        if($groupBy != "")
+            $groupBy = "group by {$groupBy}";
+        $query = "SELECT {$fields} from {$table} {$join} {$where} {$limit} {$offset} {$groupBy} {$orderBy}";
 
         return $this->doQuery($query, $conditionParams);
     }
@@ -71,7 +75,9 @@ class OracleDB
         $columnsString = "(" . implode(",", $columns) . ")"; // (test_id,score_id,user_id)
         $valuesString = "(" . implode(",", $values) . ")"; // (t6, 1, 534)
 
+
         return $this->doQuery("INSERT INTO {$table} {$columnsString} VALUES {$valuesString}", []);
+
     }
 
     public function updateRow($table, $row, $conditionArray){

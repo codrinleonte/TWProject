@@ -12,6 +12,6 @@ interface IScoresRepository
     public function getById($id);
     public function insert($score);
     public function delete($id);
-    public function getByUserId($id);
+    public function getByUsername($id);
     public function getByDate($date);
 }

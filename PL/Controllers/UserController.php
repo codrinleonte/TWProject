@@ -46,6 +46,7 @@ class UserController extends BaseController
 
             $_SESSION['user'] = $user[0];
             $_SESSION['user']['type']=$type;
+
             $this->redirect("user/profile");
 //            $this->loadView("html/kids-user-first-page");
 

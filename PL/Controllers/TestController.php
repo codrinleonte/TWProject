@@ -9,7 +9,7 @@
 require_once ("BaseController.php");
 class TestController extends BaseController
 {
-    public function completeTest(){
+       public function completeTest(){
         $this->loadView("html/KidUser/kids-test-page");
     }
 
