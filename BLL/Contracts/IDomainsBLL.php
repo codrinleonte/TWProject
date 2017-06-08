@@ -8,5 +8,7 @@
 
 
 interface IDomainsBLL{
-    public function getAll();
+      public function getAll();
+    public function getPercentagesForDomain($domainName);
+    public function getDomainsStatistics();
 }
