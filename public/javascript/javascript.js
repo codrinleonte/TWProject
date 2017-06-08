@@ -47,18 +47,17 @@ function nextQuestion(){
 		document.getElementById('nextButton').style.display = "none";
 		exit();
 }
-	
-	
+
 	questionCount++;
 	
 	document.getElementById('quest').innerHTML = "Intrebare".concat(questionCount.toString());
-	var r = document.getElementsByTagName("label")   
+	var r = document.getElementsByTagName("label")
 
 	r[0].innerHTML ="answerA".concat(questionCount.toString());
 	r[1].innerHTML ="answerB".concat(questionCount.toString());
 	r[2].innerHTML ="AnswerC".concat(questionCount.toString());
 	r[3].innerHTML ="answerD".concat(questionCount.toString());
-    
+
 }
 		/*functie care afiseaza fereastra de dupa terminarea unui test  */
 function showScore(){
@@ -123,15 +122,29 @@ function setCharacterImage(domain){
 }
 
 function setDomain(domain){
+	 setDomainInputValue(domain);
 	 localStorage.setItem("domain", domain);
 }
 
-function getDomain(){
+function getDifficulty(){
 	return localStorage.getItem("domain");
+}
+
+function setDifficulty(difficulty){
+    localStorage.setItem("difficulty", difficulty);
+}
+
+
+function getDomain(){
+    return localStorage.getItem("difficulty");
 }
 
 function showTestForm() {
    document.getElementById("startTest").style.display="none";
    document.getElementById("answersForm").style.display="block";
    nextQuestion();
+}
+
+function setDomainInputValue(domain){
+	document.getElementById('domainInput').value = domain;
 }

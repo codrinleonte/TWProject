@@ -19,7 +19,7 @@ class KidsUsersRepository implements IKidsUsersRepository
 
     public function __construct()
     {
-        $this->oracleDb = new OracleDB();
+        $this->oracleDB = new OracleDB();
     }
 
     public function getAll()
@@ -35,7 +35,7 @@ class KidsUsersRepository implements IKidsUsersRepository
 
     public function getByUsernamePass($conditionString, $conditionParams)
     {
-        $user = $this->oracleDb->getRows($this->table, $this->fields, $conditionString, $conditionParams);
+        $user = $this->oracleDB->getRows($this->table, $this->fields, $conditionString, $conditionParams);
 //        var_dump($user);exit();
         return $user;
     }
@@ -55,9 +55,24 @@ class KidsUsersRepository implements IKidsUsersRepository
         return $this->oracleDB->deleteRow($this->table, "id=:id", array("id"=>$id));
     }
 
-    public function updatePassword($updates, $conditionParams)
+    public function  deleteKidAccound($conditionString, $conditionParams)
     {
-        return $this->oracleDB->updateRow($this->table,$updates, $conditionParams);
+        return $this->oracleDB->deleteRow($this->table, $conditionString, $conditionParams);
     }
+
+
+
+    public function validatePassword($conditionString, $conditionParams){
+        $user = $this->oracleDB->getRows($this->table,$this->fields,$conditionString, $conditionParams);
+        return $user?$user:false;
+    }
+
+
+    public function updatePassword($kidUser, $conditionParams)
+    {
+        return $this->oracleDB->updateRow($this->table, $kidUser,$conditionParams);
+    }
+
+
 
 }

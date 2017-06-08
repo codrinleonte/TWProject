@@ -9,7 +9,6 @@
 
 class OracleDB
 {
-
     private $username = "JFK";
     private $password = "JFK";
     private $connectionString = "localhost";
@@ -31,11 +30,15 @@ class OracleDB
     }
 
     public function doQuery($query, $params){ //params = array('id'=>2)
-        echo $query;
-        echo $params;
+      //  echo $query;
+        //echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
-//        print_r($query);print_r($params);exit();
+      /*  print_r($query);
+        print_r("     ");
+        print_r($params);
+        print_r("<br>");print_r("<br>");
+        exit(1);*/
         if(!empty($params)){
             foreach($params as $paramName=>$paramValue){
                 oci_bind_by_name($stid, ":".$paramName, $params[$paramName]); //
@@ -44,21 +47,29 @@ class OracleDB
         }
 
         oci_execute($stid);
+
+
         $row = oci_fetch_all($stid, $res, null, null, OCI_FETCHSTATEMENT_BY_ROW);
         $res = empty($res)?null:$res;
         return $res;
 //        var_dump($res);
     }
 
-    public function getRows($table, $fields, $conditionString, $conditionParams, $join =""){
+    public function getRows($table, $fields, $conditionString, $conditionParams, $join ="", $limit = 0, $offset=0, $orderBy="", $groupBy=""){
         $where = "";
         if($conditionString != '' && !empty($conditionParams)){
             $where = "where {$conditionString}";
         }
-        $query = "SELECT {$fields} from {$table} {$join} {$where}";
+        $limit = $limit!=0?"limit {$limit}":"";
+        $offset = $offset!=0?"offset {$offset}":"";
+        if($orderBy != "")
+            $orderBy = "order by {$orderBy}";
+        if($groupBy != "")
+            $groupBy = "group by {$groupBy}";
+        $query = "SELECT {$fields} from {$table} {$join} {$where} {$limit} {$offset} {$groupBy} {$orderBy}";
 
-
-        return $this->doQuery($query, $conditionParams);
+        $result = $this->doQuery($query, $conditionParams);
+        return $result?$result:false;
     }
 
     public function insertRow($table, $row){
@@ -71,23 +82,37 @@ class OracleDB
         $columnsString = "(" . implode(",", $columns) . ")"; // (test_id,score_id,user_id)
         $valuesString = "(" . implode(",", $values) . ")"; // (t6, 1, 534)
 
+
         return $this->doQuery("INSERT INTO {$table} {$columnsString} VALUES {$valuesString}", []);
+
     }
 
     public function updateRow($table, $row, $conditionArray){
+       /* print_r($row);
+        print_r("<br>");
+        print_r($conditionArray);
+        print_r("<br>");*/
         $where ='';
         $updates = $this->getStringOfColumnsFromArrayOfValues($row);
-
+      //  print_r($row);
+      //  print_r("<br>");
         if(!empty($conditionArray)){
             $condition = $this->getStringOfColumnsFromArrayOfValues($conditionArray);
             $where = "WHERE {$condition}";
         }
 
+        //print_r($condition);
         $params = array_merge($this->getArrayOfParams($row), $this->getArrayOfParams($conditionArray));
+       // print_r("UPDATE {$table} SET {$updates} {$where}");
+       // print_r($params);
+
         return $this->doQuery("UPDATE {$table} SET {$updates} {$where}", $params);
     }
 
     public function deleteRow($table, $condition, $params){
+        print_r("DELETE FROM {$table} WHERE {$condition}");
+        print_r("<br>");
+        print_r($params);
         return $this->doQuery("DELETE FROM {$table} WHERE {$condition}", $params);
     }
 
@@ -96,17 +121,16 @@ class OracleDB
         $updates  = array();
         foreach($array as $key=>$value){
             array_push($updates, "{$key}=:{$key}");
-        }
 
+        }
         return implode(",", $updates);
     }
 
     private function getArrayOfParams($row){
         $values  = array();
         foreach($row as $key=>$value){
-            array_push($values, $values);
+           $values[$key]=$value;
         }
-
         return $values;
     }
 }

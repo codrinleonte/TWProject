@@ -24,16 +24,17 @@ class UserController extends BaseController
     public function profile(){
 
         if($_SESSION['user']['type'] == 1){
-            $template = "html/KidUser/kids-user-first-page";
+            $template = "kidUser/index";
         }
         else{
             $template = "html/ParentsUser/parentsHome";
         }
-        $this->loadView($template);
+        $this->redirect($template);
     }
 
     public function login(){
-        
+
+
         $username = $this->getFromPost("username");
         $password = $this->getFromPost("password");
         $type = $this->getFromPost("userType");
@@ -46,6 +47,7 @@ class UserController extends BaseController
 
             $_SESSION['user'] = $user[0];
             $_SESSION['user']['type']=$type;
+
             $this->redirect("user/profile");
 //            $this->loadView("html/kids-user-first-page");
 
@@ -57,5 +59,12 @@ class UserController extends BaseController
     public function logout(){
         session_destroy();
         $this->redirect("user/showlogin");
+    }
+
+    public function changePassword(){
+        $this->redirect("changePassword/index");
+    }
+    public function deleteAccount(){
+        $this->redirect("deleteAccount/index");
     }
 }

@@ -10,21 +10,25 @@
 <div class="wrapper">
 					<body onload="setCharacterImage(getDomain())">
 					<div class= "top-nav">
-						 <div class = "top-logo" onclick="location.href='/tw/user/profile'">
-        			     </div>
-					  <div class="settingsBut">
-					            <button class="dropbtn"></button>
-					            <div class="settings-content">
+						<div class = "top-logo" onclick="location.href='/tw/user/profile'">
+						</div>
 
-					               <div><a href="../Shared/change-password.html">Change password</a> <br></div>
-					               <div><a href="../Shared/delete-account.html">Delete account</a><br></div>
-					               <div><a href="../Shared/login.html">Logout</a></div>
-					            </div>
-					    </div>​
-					         <a href="#">Contact</a>
-					         <a href="/tw/scores">Scores</a>
-					         <a href="/tw/user/profile">Home</a>
-					 </div>    
+						<div class = "menu-wrapper">
+							<div class="settingsBut">
+								<button class="dropbtn"></button>
+								<div class="settings-content">
+									<a href="/tw/user/changePassword">Change password</a> <br>
+									<a href="/tw/user/deleteAccount">Delete account</a><br>
+									<a href="/tw/user/logout">Logout</a>
+								</div>
+							</div>​
+							<a href="/tw/contact">Contact</a>
+							<a href="/tw/scores">Scores</a>
+							<a href="/tw/user/profile">Home</a>
+						</div>
+
+
+					</div>
 
 <button id ="startButton" class="startButton" type="button"  onclick="showScore()" \>START Test!</button>
 					    <div class = "testForm" >

@@ -9,43 +9,44 @@
 
 
 <body>
- <form action="/TW-SGBD/pageFormularProcess"  method="post">
-   
+
 
  <div class = "pageWrap">
- <div class= "top-nav">
-      <div class = "top-logo" onclick="location.href='#'">
-      </div>
+     <div class= "top-nav">
+         <div class = "top-logo" onclick="location.href='/tw/user/profile'">
+         </div>
 
-      <div class = "menu-wrapper">
-          <div class="settingsBut">
-                    <button class="dropbtn"></button>
-                    <div class="settings-content">
-                        <a href="/tw/settings/changePassword">Change password</a> <br>
-                        <a href="/tw/settings/deleteAccount">Delete account</a><br>
-                        <a href="/tw/settings/logout">Logout</a>
-                    </div>
-          </div>​
-          <a href="/tw/contact">Contact</a>
-          <a href="/tw/scores">Scores</a>
-          <a href="/tw/user/profile">Acasa</a>
-      </div>     
-  </div>
+         <div class = "menu-wrapper">
+             <div class="settingsBut">
+                 <button class="dropbtn"></button>
+                 <div class="settings-content">
+                     <a href="/tw/user/changePassword">Change password</a> <br>
+                     <a href="/tw/user/deleteAccount">Delete account</a><br>
+                     <a href="/tw/user/logout">Logout</a>
+                 </div>
+             </div>​
+             <a href="/tw/contact">Contact</a>
+             <a href="/tw/scores">Scores</a>
+             <a href="/tw/user/profile">Home</a>
+         </div>
+
+
+     </div>
         <div class = "wrapper">
             <div class="container_delacc">
-              <form id="delete_account" action="" method="post">
+              <form id="delete_account" action="/tw/deleteAccount/deleteAccount" method="post">
     <h3>Delete account</h3>
     <fieldset>
       <label for="acc_name">Account Name</label>
-      <input type="text" tabindex="1" id="acc_name" required autofocus>
+      <input name="username" type="text" tabindex="1" id="acc_name" required autofocus>
     </fieldset>
     <fieldset>
       <label for="password">Password</label>
-      <input type="password" id="password" tabindex="2" required>
+      <input name="password" type="password" id="password" tabindex="2" required>
     </fieldset>
     <fieldset>
       <label for="retype_pw">Retype password</label>
-      <input type="password" id="retype_pw" tabindex="3" required>
+      <input name="passwordRetyped" type="password" id="retype_pw" tabindex="3" required>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Delete account</button>
