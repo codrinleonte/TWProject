@@ -44,4 +44,13 @@ class DomainsRepository implements IDomainsRepository
     {
         return $this->oracleDB->deleteRow($this->table, "id=:id", array("id"=>$id));
     }
+
+
+    public function getAllMateriiDistributie(){
+        return $this->oracleDB->getRows("materii_distributie", "*", '', []);
+    }
+
+    public function getPercentagesForDomain($domainName){
+        return $this->oracleDB->getRows("MATERII_DISTRIBUTIE", "procentaj, nivel_dificultate", "nume_materie = :numeMaterie", array("numeMaterie" => $domainName));
+    }
 }

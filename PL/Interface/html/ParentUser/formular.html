@@ -1,215 +1,219 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 
 
-   <link rel="stylesheet" type="text/css" href="../../../../public/css/formular.css">
+    <link rel="stylesheet" type="text/css" href="/tw/public/css/formular.css">
 
-    <script src="../../../../public/javascript/something.js"></script>
+    <script src="/tw/public/javascript/something.js"></script>
 </head>
 
 
-
 <body>
- 
-   <form action="/TW-SGBD/pageFormularProcess"  method="post">
+
+<form action="/TW/AddTest/getTest" method="post">
 
 
- <div class = "pageWrap">
-	<div class= "top-nav">
-		 <div class = "top-logo" onclick="location.href='parentsHome.html'"></div>
-			  <div class="settingsBut">
-			            <button class="dropbtn" name = "dropbtn" ></button>
-			            <div class="settings-content">
-			
-			               <a href="../Shared/change-password.html">Change password</a> <br>
-			               <a href="../Shared/delete-account.html">Delete account</a><br>
-			               <a href="../Shared/login.html">Logout</a>
-			            </div>
-			  </div>​
-		         <a href="../Shared/contact.html">Contact</a>
-		         <a href="../Shared/scores.html">Scores</a>
-		         <a href="formular.html">Add a test</a> 
-		         <a href="../../../../index.php">Acasa</a>
-		        
-		        
-		   
-	</div>
-     <div class ="container">
-        <div class ="domain" id="grad1">
-        <h3>Choose domain</h3>
-         <p><input type="radio" name="domain" value="math" required><b>Math</b></p>
-         <p><input type="radio" name="domain" value="biology" required><b> Biology</b></p>
-         <p><input type="radio" name="domain" value="geography" required><b> Geography</b></p>
-         <p><input type="radio" name="domain" value="history" required><b> History</b></p>
-         <p><input type="radio" name="domain" value="english" required><b> English</b></p>
+    <div class="pageWrap">
+        <div class="top-nav">
+            <div class="top-logo" onclick="location.href='parentsHome.html'"></div>
+            <div class="settingsBut">
+                <button class="dropbtn" name="dropbtn"></button>
+                <div class="settings-content">
+
+                    <a href="change-password.html">Change password</a> <br>
+                    <a href="delete-account.html">Delete account</a><br>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+            ​
+            <a href="contact.html">Contact</a>
+            <a href="scores.html">Scores</a>
+            <a href="/TW/AddTest">Add a test</a>
+            <a href="../../../index.php">Acasa</a>
+
+
         </div>
-        
-        <div class ="domain" id="grad1">
-        <h3>Choose difficulty</h3>
-         <p><input type="radio" name="difficulty" value="easy" 	 required><b> Easy</b></p>
-         <p><input type="radio" name="difficulty" value="medium" required><b> Medium</b></p>
-         <p><input type="radio" name="difficulty" value="hard" 	 required><b> Hard</b></p>
-        
+        <div class="container">
+            <div class="domain" id="grad1">
+                <h3>Choose domain</h3>
+                <p><input type="radio" name="domain" value="math" required><b>Math</b></p>
+                <p><input type="radio" name="domain" value="biology" required><b> Biology</b></p>
+                <p><input type="radio" name="domain" value="geography" required><b> Geography</b></p>
+                <p><input type="radio" name="domain" value="history" required><b> History</b></p>
+                <p><input type="radio" name="domain" value="english" required><b> English</b></p>
+            </div>
+
+            <div class="domain" id="grad1">
+                <h3>Choose difficulty</h3>
+                <p><input type="radio" name="difficulty" value="easy" required><b> Easy</b></p>
+                <p><input type="radio" name="difficulty" value="medium" required><b> Medium</b></p>
+                <p><input type="radio" name="difficulty" value="hard" required><b> Hard</b></p>
+
+            </div>
+
+            <div class="formular">
+                <div class="question">
+                    <textarea name="question1" maxlength="400" placeholder="Enter the first question..."></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer11" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer12" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer13" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer14" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save1" onclick="showDiv('q1')" type="button">Save</button>
+                </div>
+
+            </div>
+            <div class="formular1" id="q1">
+
+                <div class="question">
+                    <textarea name="question2" maxlength="400" placeholder="Enter the second question..."
+                              required></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer21" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer22" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer23" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer24" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+
+                <div class="save">
+                    <button class="saves"  name="save2" onclick="showDiv('q2')" type="button">Save</button>
+                </div>
+            </div>
+            <div class="formular1" id="q2">
+
+                <div class="question">
+                    <textarea name="question3" maxlength="400" placeholder="Enter the third question..."
+                              required></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer31" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer32" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer33" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer34" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save3" onclick="showDiv('q3')" type="button">Save</button>
+                </div>
+            </div>
+            <div class="formular1" id="q3">
+
+                <div class="question">
+                    <textarea name="question4" maxlength="400" placeholder="Enter the fourth question..."></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer41" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer42" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer43" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer44" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save4" onclick="showDiv('q4')" type="button">Save</button>
+                </div>
+
+            </div>
+            <div class="formular1" id="q4">
+
+                <div class="question">
+                    <textarea name="question5" maxlength="400" placeholder="Enter the fifth question..."
+                              required></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer51" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer52" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer53" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer54" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save5" onclick="showDiv('q5')" type="button">Save</button>
+                </div>
+
+            </div>
+            <div class="formular1" id="q5">
+
+                <div class="question">
+                    <textarea name="question6" maxlength="400" placeholder="Enter the sixth question..."
+                              required></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer61" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer62" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer63" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer64" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save6" onclick="showDiv('q6')" type="button">Save</button>
+                </div>
+
+            </div>
+            <div class="formular1" id="q6">
+
+                <div class="question">
+                    <textarea name="question7" maxlength="400" placeholder="Enter the seventh question..."
+                              required></textarea>
+                </div>
+                <div class="answer">
+                    <textarea name="answer71" maxlength="50" placeholder="Enter the good answer..." required></textarea>
+                    <textarea name="answer72" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer73" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                    <textarea name="answer74" maxlength="50" placeholder="Enter a wrong answer..." required></textarea>
+                </div>
+                <div class="save">
+                    <button class="saves"  name="save7" onclick="showDiv('btn')" type="button">Save</button>
+                </div>
+
+            </div>
+
+                <button id="btn" name="finalBtn" type="submit" class="button" style="vertical-align:middle" ><span>Send </span></button>
+
         </div>
-        
-		       <div class = "formular" >
-		           <div class ="question">
-		               <textarea name = "question1" maxlength="400"  placeholder="Enter the first question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea name ="answer11" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea name= "answer12" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name= "answer13" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name= "answer14" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		           <div class="save">
-		               <button  class="saves" type="submit" name ="save1" onclick="showDiv('q1')">Save</button> 
-		           </div>
-		
-		       </div> 
-		       <div class = "formular1"   id="q1" >
-		
-		           <div class ="question">
-		               <textarea name = "question2" maxlength="400"  placeholder="Enter the second question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea  name ="answer21" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea  name ="answer22" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea  name ="answer23"maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea  name ="answer24" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		
-		           <div class="save">
-		               <button class="saves" type="submit" name ="save2" onclick="showDiv('q2')">Save</button>
-		           </div>
-		       </div> 
-		        <div class = "formular1" id="q2">
-		
-		          <div class ="question">
-		               <textarea name = "question3" maxlength="400"  placeholder="Enter the third question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea name ="answer31" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea name ="answer32" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer33" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer34" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		           <div class="save">
-		               <button class="saves" type="submit" name ="save3" onclick="showDiv('q3')">Save</button>
-		           </div>            
-		       </div> 
-		        <div class = "formular1" id="q3">
-		
-		           <div class ="question">
-		               <textarea name = "question4" maxlength="400"  placeholder="Enter the fourth question..."></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea  name ="answer41" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea  name ="answer42" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea  name ="answer43" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea  name ="answer44"maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		           <div class="save">
-		               <button class="saves" type="submit" name ="save4" onclick="showDiv('q4')">Save</button>
-		           </div>
-		           
-		       </div> 
-		        <div class = "formular1" id="q4">
-		
-		           <div class ="question">
-		               <textarea name = "question5" maxlength="400"  placeholder="Enter the fifth question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea name ="answer51" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea name ="answer52" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer53" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer54" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		           <div class="save">
-		               <button class="saves" type="submit" name ="save5" onclick="showDiv('q5')">Save</button>
-		           </div>
-		           
-		       </div> 
-		        <div class = "formular1" id="q5">
-		
-		          <div class ="question">
-		               <textarea name = "question6" maxlength="400"  placeholder="Enter the sixth question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea name ="answer61" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea name ="answer62" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer63" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer64" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		           <div class="save">
-		               <button class="saves" type="submit" name ="save6" onclick="showDiv('q6')">Save</button>
-		           </div>
-		           
-		       </div>   
-		       <div class = "formular1" id="q6">
-		
-		           <div class ="question">
-		               <textarea  name = "question7" maxlength="400"  placeholder="Enter the seventh question..." required></textarea>
-		           </div>
-		           <div class = "answer">    
-		               <textarea name ="answer71" maxlength="50"  placeholder="Enter the good answer..." required></textarea>
-		               <textarea name ="answer72" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer73" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		               <textarea name ="answer74" maxlength="50"  placeholder="Enter a wrong answer..." required></textarea>
-		           </div>
-		            <div class="save">
-		               <button class="saves" type="submit" name ="save7" onclick="showDiv('btn')">Save</button>
-		           </div>
-		           
-		       </div>   
-		
-		       <button id = "btn" type = "submit" class="button" style="vertical-align:middle"><span>Send </span></button>
-	
-	</div>
     </div>
 
 
-     <div class="footer">
-<div class= "bottom-first-bar">
-      <div class = "first_bottom_column">
-            <div class = "bottom-logo"></div>
-            <label class = "bottom_column_label"> <p>Just for kids game is one of the most amazing and interactive full of entartaiment quiz game you will find on the internet. JUST for fun!</p></label>
-      </div>
-      <div class = "second_bottom_column"><label class = "bottom_column_label">         
-                                                <h3>NAVIGATION</h3>
-                                                <div class = "bottom-nav">
-                                                   <a href="#">Acasa</a>
-                                                   <a href="#">Contact</a>
-                                                   <a href="#">Scores</a>
-                                                   <a href="#">About</a>
-                                                   <a href="#">Settings</a>
-                                                </div>
-                                          </label></div>
-      <div class = "third_bottom_column"><label class = "bottom_column_label">
-                                                   <h3>SOCIAL</h3></label>
-                                                    <div class = "socialItems">
-                                                        <a class = "fb"     href="#"><img  class = "socialFb" src="../../../../public/images/fb.png"></a>
-                                                        <a class = "tweet"  href="#"><img class = "socialTweet" src="../../../../public/images/twitter.png"></a>
-                                                        <a class = "google" href="#"><img  class = "socialGoogle" src="../../../../public/images/google.png"></a>
-                                                        <a class = "feed"   href="#"><img class = "socialFeed" src="../../../../public/images/feed.png"></a>
-                                                     </div>
+    <div class="footer">
+        <div class="bottom-first-bar">
+            <div class="first_bottom_column">
+                <div class="bottom-logo"></div>
+                <label class="bottom_column_label"><p>Just for kids game is one of the most amazing and interactive full
+                    of entartaiment quiz game you will find on the internet. JUST for fun!</p></label>
+            </div>
+            <div class="second_bottom_column"><label class="bottom_column_label">
+                <h3>NAVIGATION</h3>
+                <div class="bottom-nav">
+                    <a href="#">Acasa</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Scores</a>
+                    <a href="#">About</a>
+                    <a href="#">Settings</a>
+                </div>
+            </label></div>
+            <div class="third_bottom_column"><label class="bottom_column_label">
+                <h3>SOCIAL</h3></label>
+                <div class="socialItems">
+                    <a class="fb" href="#"><img class="socialFb" src="../../../public/images/fb.png"></a>
+                    <a class="tweet" href="#"><img class="socialTweet" src="../../../public/images/twitter.png"></a>
+                    <a class="google" href="#"><img class="socialGoogle" src="../../../public/images/google.png"></a>
+                    <a class="feed" href="#"><img class="socialFeed" src="../../../public/images/feed.png"></a>
+                </div>
 
-                                          </div>
-      <div class = "fourth_bottom_column"> <label class = "bottom_column_label">
-                                         <h3>CONTACT INFORMATION</h3>
-                                                    <p>Titu Maiorescu nr 7, Iasi,Romania<br><br>
-                                                    codryn96@gmail.com</p>
-                                                   
-                                          </label></div>
-  </div>
-  
-  <div class= "bottom-second-bar">
-      <br><label class = "bottom-second-bar-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
-  </div>
+            </div>
+            <div class="fourth_bottom_column"><label class="bottom_column_label">
+                <h3>CONTACT INFORMATION</h3>
+                <p>Titu Maiorescu nr 7, Iasi,Romania<br><br>
+                    codryn96@gmail.com</p>
 
- </div>
+            </label></div>
+        </div>
+
+        <div class="bottom-second-bar">
+            <br><label class="bottom-second-bar-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
+        </div>
+
+    </div>
 
 
 </form>
