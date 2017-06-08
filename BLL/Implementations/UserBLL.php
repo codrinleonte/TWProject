@@ -14,16 +14,25 @@ class UserBLL implements IUserBLL
 {
 
     private $kidsUserRepo;
+<<<<<<< HEAD
     private $testRepo;
     public function __construct()
     {
+=======
+    public function __construct(){
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
         $this->kidsUserRepo = new KidsUsersRepository();
         $this->testRepo = new TestRepository();
     }
 
+<<<<<<< HEAD
     public function checkKidsLogin($user, $pass)
     {
         $user = $this->kidsUserRepo->getByUsernamePass(" username=:myuser and pass =:mypass", array("myuser" => $user, "mypass" => $pass));
+=======
+    public function checkKidsLogin($user, $pass){
+        $user = $this->kidsUserRepo->getByUsernamePass(" username=:myuser and pass =:mypass", array("myuser"=>$user, "mypass"=>$pass));
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
 //        $user = $this->userRepo->getOneWhere("username = :username and pass= :pass", array("username"=>"patras.scortanu", "pass" => "PATRAS1"));
         return $user ? $user : false;
     }

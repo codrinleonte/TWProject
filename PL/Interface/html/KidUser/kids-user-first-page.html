@@ -54,6 +54,7 @@
 
             <div id="difficultyForm" class="difficultyForm">
                 Alege dificultatea testului:<br><br>
+<<<<<<< HEAD
                 <form method="post" action="/tw/test/gettestdata">
                     <input type="hidden" name="domain" id="domainInput">
                     <div><input type="radio" name="difficulty" value="EASY"
@@ -75,6 +76,21 @@
                     <div id="imageMed" class="imageMed"></div>
                 </div>
 
+=======
+              <form class = "difOption">
+              <div> <input type="radio" name="difficulty" value="easy" onclick= "showImageEasy()"/><label>Sunt un prescolar micut (Gradinita)</label></div><br>
+              <div> <input type="radio" name="difficulty" value="medium" onclick= "showImageMed()"/><label>Am avansat, dar inca mai am multe de invatat! (I-IV)</label></div><br>
+              <div><input type="radio" name="difficulty" value="hard" onclick= "showImageHard()"/><label>Nimic nu ma poate opri, vreau un test pentru elevi mari! (V-VII)</label></div>
+              </form>
+
+            
+            <div class = "image_start">
+              <div id = "StartBut" class = "StartButton" onclick="location.href='/tw/completeATest'">Incepe Testul! </div>
+
+              <div id="imageMed" class = "imageMed"></div>
+             
+              
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
             </div>
         </form>
     </div>

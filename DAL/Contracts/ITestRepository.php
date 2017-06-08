@@ -15,5 +15,9 @@ interface ITestRepository
     public function getTestId();
     public function getQuestionId();
     public function getAnswerId();
+<<<<<<< HEAD
     public function getAvailableTests($domain,$difficulty,$kidID);
+=======
+
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
 }

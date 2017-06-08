@@ -15,10 +15,16 @@ class TestRepository implements ITestRepository
     private $table = "PROPOSED_TESTS";
     private $fields = "*";
 
+<<<<<<< HEAD
 
     public function __construct()
     {
         $this->oracleDB = new OracleDB();
+=======
+    public function __construct()
+    {
+        $this->oracleDb = new OracleDB();
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
     }
 
     public function getAll()
@@ -56,6 +62,7 @@ class TestRepository implements ITestRepository
         return $this->oracleDB->getRows($this->table, "substr(max(answer_id),1,1)||to_char(max(CAST (substr(answer_id,2) as int))+1)");
     }
 
+<<<<<<< HEAD
     public function getAvailableTests($domain,$difficulty,$kidID){
         $query = "SELECT " . $this->fields .
             " FROM PROPOSED_TESTS JOIN DOMAINS ON PROPOSED_TESTS.DOMAIN_ID=DOMAINS.DOMAIN_ID WHERE PROPOSED_TESTS.TEST_ID 
@@ -69,6 +76,8 @@ class TestRepository implements ITestRepository
 
       return $this->oracleDB->doQuery($query,$params);
     }
+=======
+>>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
 
 
 }
