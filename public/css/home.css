@@ -5,7 +5,7 @@ html, body{
 }
 .parallax {
   
-    background-image: url("/tw/public/images/4FPllju-cartoon-network-backgrounds.jpg");
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
@@ -97,7 +97,7 @@ html, body{
 }
 
 .bottom-logo{
-  background-image: url("/tw/public/images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -121,6 +121,7 @@ html, body{
 .wrapper{
      height:auto !important;
      min-height:100%;
+     overflow: hidden;
 }
 
 
@@ -132,7 +133,7 @@ html, body{
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("/tw/public/images/FEZ-04-512.png");
+    background: url("../images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -184,7 +185,7 @@ html, body{
 }
 
 .top-logo{
-  background-image: url("/tw/public/images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -360,25 +361,25 @@ html, body{
 
 }
 
-.mhard {width: 11.3%; }
-.mmedium {width: 3%; }
-.measy {width: 6.5%; }
+/*.mhard {width: 11.3%; }*/
+/*.mmedium {width: 3%; }*/
+/*.measy {width: 6.5%; }*/
 
-.ghard {width: 0.67%; }
-.gmedium {width: 21.17%; }
-.geasy {width: 12.3%; }
+/*.ghard {width: 0.67%; }*/
+/*.gmedium {width: 21.17%; }*/
+/*.geasy {width: 12.3%; }*/
 
-.hhard {width: 8.6%; }
-.hmedium {width: 6.12%; }
-.heasy {width: 13.56%; }
+/*.hhard {width: 8.6%; }*/
+/*.hmedium {width: 6.12%; }*/
+/*.heasy {width: 13.56%; }*/
 
-.bhard {width: 35.17%; }
-.bmedium {width: 12.15%; }
-.beasy {width: 6%; }
+/*.bhard {width: 35.17%; }*/
+/*.bmedium {width: 12.15%; }*/
+/*.beasy {width: 6%; }*/
 
-.ehard {width: 8.6%; }
-.emedium {width: 1.56%; }
-.eeasy {width: 17%; }
+/*.ehard {width: 8.6%; }*/
+/*.emedium {width: 1.56%; }*/
+/*.eeasy {width: 17%; }*/
 
 .h{background-color: red;border-radius: 40px 0px 0px 0px;}
 .m{background-color: orangered;}
@@ -445,7 +446,7 @@ html, body{
    width: 150px;
    height: 133px;
    float: left;
-   background-image: url("/tw/public/images/sponge2.png");
+   background-image: url("../images/sponge2.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
@@ -458,7 +459,7 @@ html, body{
    width: 500px;
    height: 516px;
    float: right;
-   background-image: url("/tw/public/images/source.gif");
+   background-image: url("../images/source.gif");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;
