@@ -6,7 +6,7 @@ html, body{
 }
 .parallax {
   
-    background-image: url("/tw/public/images/4FPllju-cartoon-network-backgrounds.jpg");
+    background-image: url("../images/4FPllju-cartoon-network-backgrounds.jpg");
     min-height: 500px; 
     background-attachment: fixed;
     background-position: center;
@@ -98,7 +98,7 @@ html, body{
 }
 
 .bottom-logo{
-  background-image: url("/tw/public/images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -133,7 +133,7 @@ html, body{
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("/tw/public/images/FEZ-04-512.png");
+    background: url("../images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -185,7 +185,7 @@ html, body{
 }
 
 .top-logo{
-  background-image: url("/tw/public/images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
