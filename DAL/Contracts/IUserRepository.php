@@ -11,8 +11,5 @@ interface IUserRepository
     public function getAll();
     public function getById($id);
     public function getByUsernamePass($conditionString, $conditionParams);
-    public function insert($user);
-    public function update($user, $id);
-    public function delete($id);
     public function updatePassword($updates, $conditionParams);
 }

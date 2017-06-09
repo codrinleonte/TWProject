@@ -1,0 +1,29 @@
+<div class = "testForm" style="display:none">
+
+    <div id = "quest" name ="question"  class="question"><p>{question}</p></div>
+
+    <div id = "characterImg" class = "characterImage">
+
+    </div>
+    <div class="answersWrapper">
+        <button id ="startTest" class="startTest" type="button"  onclick="showTestForm()" \>START TEST!</button>
+        <div id = "answersForm" class= "answers">
+
+                <div  class = "answersTop">
+                    <input id = "answerA" name = "answer" type="radio"  checked="true" /><label >{answerA}</label>
+                    <input id = "answerB"  name = "answer" type="radio"  value = "2" /><label>{answerB}</label></div><br>
+                <div class="answersBottom">
+                    <input id = "answerC"  name = "answer" type="radio"  value = "3"  /><label>{answerC}</label>
+                    <input id = "answerD"  name = "answer" type="radio"  value = "4"  /><label>R{answerD}</label></div><br>
+
+                <div class="buttonsContainer">
+                    <button id ="finishButton" class="finishButton" type="button"  onclick="showScore()" \>Finish Test!</button>
+                    <button id ="nextButton" class="nextButton" type="button" onclick="nextQuestion()"\>Next</button>
+                </div>
+
+        </div>
+
+        </form>
+    </div>
+
+</div>

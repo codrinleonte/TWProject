@@ -21,6 +21,8 @@ class ScoresBLL implements IScoresBll
 
        // print_r ($_SESSION['user']['USERNAME']);
         $userScores = $this->scoresRepo->getByUsername($_SESSION['user']['USERNAME']);
+       //print_r ($userScores);
+        exit;
         $todayScores = $this->scoresRepo->getByDate(date("d-M-Y"));
 
         return array("allScores" => $allScores, "userScores"=>$userScores, "todayScores" => $todayScores);

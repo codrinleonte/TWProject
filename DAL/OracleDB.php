@@ -9,8 +9,8 @@
 
 class OracleDB
 {
-    private $username = "student";
-    private $password = "STUDENT";
+    private $username = "JFK";
+    private $password = "JFK";
     private $connectionString = "localhost";
 
     private $conn;
@@ -30,23 +30,16 @@ class OracleDB
     }
 
     public function doQuery($query, $params){ //params = array('id'=>2)
-
       //  echo $query;
         //echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
-      /*  print_r($query);
+       /* print_r("<br>");print_r("<br>");
+        print_r($query);
         print_r("     ");
         print_r($params);
         print_r("<br>");print_r("<br>");
         exit(1);*/
-
-       // echo $query;
-       // echo $params;
-        $stid = oci_parse($this->conn,$query);
-//        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
-       // print_r($query);print_r($params);
-
         if(!empty($params)){
             foreach($params as $paramName=>$paramValue){
                 oci_bind_by_name($stid, ":".$paramName, $params[$paramName]); //
@@ -63,25 +56,20 @@ class OracleDB
 //        var_dump($res);
     }
 
-    public function getRows($table, $fields, $conditionString, $conditionParams, $join ="", $limit = 0, $offset=0, $orderBy="", $groupBy=""){
+    public function getRows($table, $fields, $conditionString, $conditionParams, $join ="", $orderBy="", $groupBy=""){
         $where = "";
         if($conditionString != '' && !empty($conditionParams)){
             $where = "where {$conditionString}";
         }
-        $limit = $limit!=0?"limit {$limit}":"";
-        $offset = $offset!=0?"offset {$offset}":"";
+
         if($orderBy != "")
             $orderBy = "order by {$orderBy}";
         if($groupBy != "")
             $groupBy = "group by {$groupBy}";
-        $query = "SELECT {$fields} from {$table} {$join} {$where} {$limit} {$offset} {$groupBy} {$orderBy}";
-
+        $query = "SELECT {$fields} from {$table} {$join} {$where} {$groupBy} {$orderBy}";
 
         $result = $this->doQuery($query, $conditionParams);
         return $result?$result:false;
-
-        return $this->doQuery($query, $conditionParams);
-
     }
 
     public function insertRow($table, $row){
@@ -145,9 +133,4 @@ class OracleDB
         }
         return $values;
     }
-
-
-      public function getConn(){
-        return $this->conn;
-  }
 }

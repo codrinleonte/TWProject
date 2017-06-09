@@ -14,4 +14,5 @@ interface IScoresRepository
     public function delete($id);
     public function getByUsername($id);
     public function getByDate($date);
+
 }

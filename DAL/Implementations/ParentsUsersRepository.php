@@ -3,20 +3,17 @@
 /**
  * Created by PhpStorm.
  * User: codry
- * Date: 6/3/2017
- * Time: 12:16 PM
+ * Date: 6/9/2017
+ * Time: 8:49 AM
  */
 
-include("DAL/OracleDB.php");
-include ("DAL/Contracts/IKidsUsersRepository.php");
-
-class KidsUsersRepository implements IKidsUsersRepository
+require_once("DAL/OracleDB.php");
+include ("DAL/Contracts/IParentsUsersRepository.php");
+class ParentsUsersRepository implements IParentsUsersRepository
 {
     private $oracleDB;
-    private $table = "kids_users";
+    private $table = "parents_users";
     private $fields = "*";
-    private $selectableFields = "kid_user_id, parent_user_id, username, first_name, last_name, birth_date";
-
     public function __construct()
     {
         $this->oracleDB = new OracleDB();
@@ -25,7 +22,7 @@ class KidsUsersRepository implements IKidsUsersRepository
     public function getAll()
     {
         return $this->oracleDB->getRows($this->table, $this->fields, '', []);
-//        return $this->oracleDB->getRows("kids_users k", "k.username, k.first_name, p.first_name as parent_first_name", "where kid_user_id = :id and parent_user_id = :id2", array("id"=>2, "id2"=>5), "join parents_users p on p.parent_user_id = k.parent_user_id");
+
     }
 
     public function getById($id)
@@ -40,23 +37,25 @@ class KidsUsersRepository implements IKidsUsersRepository
         return $user;
     }
 
-    public function validateKidPassword($conditionString, $conditionParams){
+
+
+    public function validateParentPassword($conditionString, $conditionParams){
         $user = $this->oracleDB->getRows($this->table,$this->fields,$conditionString, $conditionParams);
         return $user?$user:false;
     }
 
-    public function validateKidUsername($conditionString, $conditionParams){
+    public function validateParentUsername($conditionString, $conditionParams){
         $user = $this->oracleDB->getRows($this->table,$this->fields,$conditionString, $conditionParams);
         return $user?$user:false;
     }
-
 
     public function updatePassword($kidUser, $conditionParams)
     {
         return $this->oracleDB->updateRow($this->table, $kidUser,$conditionParams);
     }
 
-    public function  deleteKidAccount($user,$conditionParams)
+
+    public function  deleteParentAccount($user,$conditionParams)
     {
         return $this->oracleDB->updateRow($this->table, $user,$conditionParams);
     }

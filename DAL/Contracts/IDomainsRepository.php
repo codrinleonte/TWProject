@@ -11,6 +11,4 @@ interface IDomainsRepository{
     public function insert($domain);
     public function update($domain, $id);
     public function delete($id);
-    public function getPercentagesForDomain($domainId);
-    public function getAllMateriiDistributie();
 }

@@ -18,22 +18,27 @@ class DomainsController extends BaseController
     }
 
     public function index(){
-        $statistics = "";
-        $domainsStatistics = $this->domainsBll->getDomainsStatistics();
-        foreach($domainsStatistics as$domainName => $domainPercentages){
-            $statistics .= $this->renderStatistic($domainName, $domainPercentages);
+        $domainsList = '';
+        $domains = $this->domainsBll->getAll();
+
+//        mail("radeanu.razvan99@gmail.com", "Subiect", "test");
+
+        foreach($domains as $domain){
+            $domainsList .= "<li>{$domain['DOMAIN']} is {$domain['DIFFICULTY']}</li>";
         }
-        $this->loadView("html/ParentUser/parentsHome", array("statistics"=> $statistics));//, "geography"=>$geography, "biology"=>$biology,"english"=>$english,"history"=>$history));
+
+//        $username = $_SESSION['user']['username'];
+        $username = "Razvan";
+        $data = array("domainsList" => $domainsList, "title" => "Pagina cu domenii", "user"=>$username);
+        $this->loadView("domains-list", $data);
     }
 
+    public function asd($a, $b, $c){
+        echo $a, $b, $c;
+    }
 
-    private function renderStatistic($domain, $percentages){
-        return $this->renderView("templates/statistics/statistics.container", array(
-            "domain" => $domain,
-            "percentageEasy" =>$percentages[0]["PROCENTAJ"],
-            "percentageMedium" =>$percentages[1]["PROCENTAJ"],
-            "percentageHard" =>$percentages[2]["PROCENTAJ"],
-        ));
+    public function scores(){
+
     }
 
 }

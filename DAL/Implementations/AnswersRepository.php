@@ -17,13 +17,13 @@ class AnswersRepository implements IAnswersRepository
 
     public function __construct()
     {
-        $this->oracleDb = new OracleDB();
+        $this->oracleDB = new OracleDB();
     }
     public function getCorrectAnswer($idQuestion){
         return $this->oracleDB->getRows($this->table, "CORECT_ANSWER", "QUESTION_ID=:id", array("id"=>$idQuestion));
     }
 
     public function getAnswers($idQuestion){
-        return $this->oracleDB->getRows($this->table, $this->fields , "QUESTION_ID=:id", array("id"=>$idQuestion));
+        return $this->oracleDB->getRows($this->table, $this->fields , "ANSWERS_JFK.QUESTION_ID=:id", array("id"=>$idQuestion)," JOIN QUESTIONS_JFK  ON ANSWERS_JFK.QUESTION_ID =  QUESTIONS_JFK.QUESTION_ID");
     }
 }

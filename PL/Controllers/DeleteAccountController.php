@@ -22,28 +22,42 @@ class DeleteAccountController extends  BaseController
     }
 
     public function deleteAccount(){
+
         $currentUsername=$_SESSION['user']['USERNAME'];
         $currentPassword=$_SESSION['user']['PASS'];
-        print_r(  $currentPassword);
+
+
+       // print_r( $currentPassword);
         if (isset($_POST['submit'])) {
-            $typedUsername= $_POST['username'];
+            $typedUsername = $_POST['username'];
             $typedPassword = $_POST['password'];
-            print_r( $typedUsername);
-            print_r( $typedPassword );
             $retypedPassword = $_POST['passwordRetyped'];
-            print_r(  $retypedPassword );
-            if( $currentUsername !=  $typedUsername){
+
+            /*  print_r( $typedUsername);
+              print_r( $typedPassword );
+              print_r(  $retypedPassword );*/
+
+            if ($_SESSION['user']['type'] == 2) {
+                $currentId = $_SESSION['user']['PARENT_USER_ID'];
+                $response = $this->userBll->deleteParentAccount($typedUsername, $typedPassword, $retypedPassword, $currentId);
+            }
+            else if ($_SESSION['user']['type'] == 1){
+                $currentId = $_SESSION['user']['KID_USER_ID'];
+                $response = $this->userBll->deleteKidAccount($typedUsername, $typedPassword, $retypedPassword, $currentId);
+            }
+
+            if($response == -1 ) {
                 print_r("Username gresit!");
             }
-            else if($typedPassword  !=  $currentPassword){
+            else if($response == -2){
                 print_r("Parola incorecta!");
             }
-            else if($typedPassword !=$retypedPassword){
+            else if($response == -3){
                 print_r("Parolele nu coincid!");
             }
             else{
-                $this->userBll->deleteKidAccound($typedUsername,$typedPassword);
-               // $this->redirect("user/showlogin") ;
+                print_r("Ati sters conturile cu succes!");
+                $this->redirect("user/showlogin") ;
             }
 
         }

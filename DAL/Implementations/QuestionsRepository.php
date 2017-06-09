@@ -16,7 +16,7 @@ class QuestionsRepository implements IQuestionsRepository
 
     public function __construct()
     {
-        $this->oracleDb = new OracleDB();
+        $this->oracleDB = new OracleDB();
     }
 
     public function getQuestionById($idQuestion){
@@ -25,7 +25,7 @@ class QuestionsRepository implements IQuestionsRepository
 
 
     public function getQuestionsFromTest($idTest){
-        return $this->oracleDB->getRows($this->table, $this->fields, "TEST_ID=:id", array("id"=>$idTest));
+        return $this->oracleDB->getRows($this->table, $this->fields, "QUESTIONS_JFK.TEST_ID=:id", array("id"=>$idTest),"JOIN PROPOSED_TESTS  ON QUESTIONS_JFK.TEST_ID = PROPOSED_TESTS.TEST_ID ");
     }
 
 

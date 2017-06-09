@@ -11,8 +11,7 @@ include ("DAL/Implementations/DomainsRepository.php");
 class DomainsBLL implements IDomainsBLL
 {
     private $repo;
-    public function __construct()
-    {
+    public function __construct(){
         $this->repo = new DomainsRepository();
     }
 
@@ -21,20 +20,7 @@ class DomainsBLL implements IDomainsBLL
         return $this->repo->getAll();
     }
 
-    public function getPercentagesForDomain($domainName)
-    {
-        return $this->repo->getPercentagesForDomain($domainName);
-    }
 
-    public function getDomainsStatistics()
-    {
-        $result = array();
-        $domains = $this->repo->getAllMateriiDistributie();
-        foreach($domains as $domain){
-            $percentages = $this->repo->getPercentagesForDomain($domain['NUME_MATERIE']);
-            $domainName = ucfirst(strtolower($domain['NUME_MATERIE']));
-            $result[$domainName] = $percentages;
-        }
-        return $result;
-    }
+//    public function get
+
 }
