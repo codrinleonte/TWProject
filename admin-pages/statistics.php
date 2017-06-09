@@ -19,9 +19,9 @@
 			<a href = "#">Logout</a>
 		</div>
 	</div>
-	<a href = "statistics.html">Statistics</a>
-	<a href = "add-test.html">Add new test</a>
-	<a href = "notification.html">Notification</a>
+	<a href = "statistics.php">Statistics</a>
+	<a href = "add-test.php">Add new test</a>
+	<a href = "notification.php">Notification</a>
 	<a href = "admin-first-page.html">Home</a>
 	
 </div>
@@ -165,59 +165,37 @@
                     ?>
                       </table>
 				</div>
+
 				   
                    	<div id="getDis" style="display:none;">
+           
 					<div class="firsthalf">
-              
+                            <?php
+        $sql_dis = oci_parse($conn, "select * from DISTRIBUTIE_MATERII");
+        oci_execute($sql_dis);
+        while(ociFetch($sql_dis)):
+        $domain = ociresult($sql_dis,1)." ".ociresult($sql_dis,2);
+        $procent = ociresult($sql_dis,3);
+        ?>
                   <div class="container a">
                    
                     <div class="hrd">
 					
-                       <div class="t mhard h">20%</div>
+                       <div class="t mhard h"><?php echo $procent?></div>
                     </div>
                     
                     
-                    <div class="name">Math</div>
+                    <div class="name"><?php echo $domain?></div>
                   </div>
 				  <br>
  
-                  <div class="container b">
-                    <div class="hrd">
-                      <div class="t ghard h">34%</div>
-                    </div>
-                    
-                    <div class="name">Geography</div>
-                  </div>
-				  <br>
-
-                  <div class="container a">              
-                    <div class="hrd">
-                      <div class="t hhard h">16%</div>
-                    </div>
-                   
-                    <div class="name">History</div>
-                  </div>
-
-                  <br>
-                  <div class="container b">
-                    <div class="hrd">
-                      <div class="t bhard h"> 7%</div>
-                    </div>
-                    
-                    <div class="name">Biology</div>
-                  </div>
-
-                  <br>
-                  <div class="container a">
-                    <div class="hrd">
-                      <div class="t ehard h">23%</div>
-                    </div>
-                  
-                    <div class="name">English</div>
-                  </div>
+                  <?php  endwhile; ?> 
 
                 </div>
+                        
 				</div>
+       
+        
         
     </div>
 				  

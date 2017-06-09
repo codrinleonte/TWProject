@@ -28,7 +28,7 @@
 			<a href = "#">Logout</a>
 		</div>
 	</div>
-	<a href = "statistics.html">Statistics</a>
+	<a href = "statistics.php">Statistics</a>
 	<a href = "add-test.php">Add new test</a>
 	<a href = "notification.php">Notification</a>
 	<a href = "admin-first-page.html">Home</a>
@@ -95,7 +95,10 @@
         
                         oci_execute($stiu,OCI_COMMIT_ON_SUCCESS);
         oci_commit($conn); 
-         header("Location: notification.php#");
+       echo '
+                        <script type="text/javascript">
+                        location.reload();
+                        </script>';
         
     
     }
