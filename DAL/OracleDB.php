@@ -9,8 +9,8 @@
 
 class OracleDB
 {
-    private $username = "JFK";
-    private $password = "JFK";
+    private $username = "student";
+    private $password = "STUDENT";
     private $connectionString = "localhost";
 
     private $conn;
@@ -30,7 +30,7 @@ class OracleDB
     }
 
     public function doQuery($query, $params){ //params = array('id'=>2)
-<<<<<<< HEAD
+
       //  echo $query;
         //echo $params;
         $stid = oci_parse($this->conn,$query);
@@ -40,13 +40,13 @@ class OracleDB
         print_r($params);
         print_r("<br>");print_r("<br>");
         exit(1);*/
-=======
+
        // echo $query;
        // echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
        // print_r($query);print_r($params);
->>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
+
         if(!empty($params)){
             foreach($params as $paramName=>$paramValue){
                 oci_bind_by_name($stid, ":".$paramName, $params[$paramName]); //
@@ -76,12 +76,12 @@ class OracleDB
             $groupBy = "group by {$groupBy}";
         $query = "SELECT {$fields} from {$table} {$join} {$where} {$limit} {$offset} {$groupBy} {$orderBy}";
 
-<<<<<<< HEAD
+
         $result = $this->doQuery($query, $conditionParams);
         return $result?$result:false;
-=======
+
         return $this->doQuery($query, $conditionParams);
->>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
+
     }
 
     public function insertRow($table, $row){
@@ -145,4 +145,9 @@ class OracleDB
         }
         return $values;
     }
+
+
+      public function getConn(){
+        return $this->conn;
+  }
 }

@@ -259,7 +259,7 @@ tr:nth-child {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-	position:center:
+	position:center;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
@@ -313,7 +313,7 @@ margin-top:50px;
 .mhard {width: 20%; }
 
 
-.ghard {width: 34; }
+.ghard {width: 34%; }
 
 
 .hhard {width: 16%; }

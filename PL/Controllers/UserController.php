@@ -27,7 +27,7 @@ class UserController extends BaseController
             $template = "kidUser/index";
         }
         else{
-            $template = "html/ParentsUser/parentsHome";
+            $template = "parentUser/index";
         }
         $this->redirect($template);
     }
@@ -39,21 +39,36 @@ class UserController extends BaseController
         $password = $this->getFromPost("password");
         $type = $this->getFromPost("userType");
 
-       // echo($username . " " . $password);
-       // echo("\n");
+        // echo($username . " " . $password);
+        // echo("\n");
         //$user = $this->userBll->checkKidsLogin($username, $password);
         //echo($user);
-        if($user = $this->userBll->checkKidsLogin($username, $password)){
+        if( $type == 1){
+            $user = $this->userBll->checkKidsLogin($username, $password);
+            if($user) {
+                $_SESSION['user'] = $user[0];
+                $_SESSION['user']['type'] = $type;
 
-            $_SESSION['user'] = $user[0];
-            $_SESSION['user']['type']=$type;
-
-            $this->redirect("user/profile");
+                $this->redirect("user/profile");
 //            $this->loadView("html/kids-user-first-page");
-
-        } else {
-            exit("Wrong input data.Try again");
+            }
+            else {
+                exit("Wrong input data.Try again");
+            }
         }
+        else if ($type == 2){
+            $user = $this->userBll->checkParentsLogin($username, $password);
+            if($user) {
+                $_SESSION['user'] = $user[0];
+                $_SESSION['user']['type'] = $type;
+
+                $this->redirect("user/profile");
+            }
+            else {
+                exit("Wrong input data.Try again");
+            }
+        }
+
     }
 
     public function logout(){

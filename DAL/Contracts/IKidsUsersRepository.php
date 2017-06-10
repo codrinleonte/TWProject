@@ -6,8 +6,8 @@
  * Date: 6/3/2017
  * Time: 12:13 PM
  */
-include("DAL/Contracts/IUserRepository.php");
+require_once("DAL/Contracts/IUserRepository.php");
 interface IKidsUsersRepository extends IUserRepository
 {
-
+    public function  deleteKidAccount($conditionString, $conditionParams);
 }

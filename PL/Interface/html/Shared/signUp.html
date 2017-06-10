@@ -4,16 +4,16 @@
 <head>
 <meta charset="utf-8">
 <title>signUp</title>
-<link href="../../../../public/css/signUp.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/tw/public/css/signUp.css">
 </head>
 
 <body>
-	
 
+<form action="/TW/SignUp/signUpFamilly" method="post">
  <div class="wrapper">
  <div class="container">
   <p><h3>The Parent goes here</h3></p>
-  
+
     <p><input type="text" placeholder="First name" name="parentFirstName" required>	</p>
     <p><input type="text" placeholder="Last name" name="parentLastName" required>	</p>
     <p><input type="text" placeholder="Email adress" name="parentEmail" required>	</p>
@@ -22,10 +22,11 @@
     <p><input type="text" placeholder="Your Phone Number" name="parentNumber" required></p>
 
   </div>
-  
 
-   
-    <button class="registrationButton">Sign Up</button>
+
+
+        <button class="registrationButton" name="signUp">Sign Up</button>
+
     <div class="container" >
     <p><h3>And the Child goes here</h3></p>
     
@@ -39,5 +40,6 @@
 </div>
 
 </div>
+</form>
 </body>
 </html>

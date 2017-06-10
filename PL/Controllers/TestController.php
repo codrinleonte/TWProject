@@ -6,16 +6,28 @@
  * Date: 6/3/2017
  * Time: 10:56 PM
  */
-require_once ("BaseController.php");
+require_once("BaseController.php");
+
 class TestController extends BaseController
 {
-<<<<<<< HEAD
-       public function index(){
+    private $testBLL;
+    public function __construct()
+    {
+        $this->testBLL = new TestsBLL();
+    }
+    public function index()
+    {
 
-=======
-       public function completeTest(){
->>>>>>> dadc836a9364850c83abe9285bf9c6d167a9977c
         $this->loadView("html/KidUser/kids-test-page");
+    }
+
+    public function insert(){
+        if(!isset($_POST['score']) || !isset($_POST['testId']) || empty($_POST['score']) || empty($_POST['testId']) ){
+            exit();
+        }
+        $score = $this->getFromPost('score');
+        $testId = $this->getFromPost('testId');
+        $this->testBLL->insertScore($score, $testId);
     }
 
 }

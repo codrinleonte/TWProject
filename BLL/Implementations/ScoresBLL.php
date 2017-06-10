@@ -19,8 +19,10 @@ class ScoresBLL implements IScoresBll
     public function getAll(){
         $allScores = $this->scoresRepo->getAll();
 
-       // print_r ($_SESSION['user']['USERNAME']);
+        // print_r ($_SESSION['user']['USERNAME']);
         $userScores = $this->scoresRepo->getByUsername($_SESSION['user']['USERNAME']);
+        //print_r ($userScores);
+
         $todayScores = $this->scoresRepo->getByDate(date("d-M-Y"));
 
         return array("allScores" => $allScores, "userScores"=>$userScores, "todayScores" => $todayScores);

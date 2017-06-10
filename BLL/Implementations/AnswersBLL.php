@@ -15,11 +15,11 @@ class AnswersBLL implements IAnswersBLL
 
     public function getAnswers($idQuestion)
     {
-       return $this->getAnswers($idQuestion);
+        return $this->getAnswers($idQuestion);
     }
     public function getCorrectAnswer($idQuestion)
     {
-       return $this->getCorrectAnswer($idQuestion);
+        return $this->getCorrectAnswer($idQuestion);
     }
 
 }

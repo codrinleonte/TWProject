@@ -31,15 +31,15 @@ class ScoresController extends BaseController
         $tableRows = "";
         if (!empty($table)) {
 
-        foreach ($table as $tableData) {
-            $tableRows .= $this->renderView("templates/tables/table.row",
-                array("username" => $tableData['USERNAME'],
-                    "score" => $tableData['SCORE'],
-                    "domain" => $tableData['DOMAIN'],
-                    "difficulty" => $tableData['DIFFICULTY'],
-                    "date" => $tableData['TEST_DATE']));
+            foreach ($table as $tableData) {
+                $tableRows .= $this->renderView("templates/tables/table.row",
+                    array("username" => $tableData['USERNAME'],
+                        "score" => $tableData['SCORE'],
+                        "domain" => $tableData['DOMAIN'],
+                        "difficulty" => $tableData['DIFFICULTY'],
+                        "date" => $tableData['TEST_DATE']));
+            }
         }
-    }
         $table = $this->renderView("templates/tables/template.tabel.scoruri", array("rows"=>$tableRows));
         return $table;
     }
