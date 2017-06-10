@@ -1,4 +1,4 @@
-﻿
+﻿<html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="/tw/public/css/kidsFirstPage.css">
@@ -9,13 +9,12 @@
 <body>
 
 
-
-<div class = "pageWrap">
-    <div class= "top-nav">
-        <div class = "top-logo" onclick="location.href='/tw/user/profile'">
+<div class="pageWrap">
+    <div class="top-nav">
+        <div class="top-logo" onclick="location.href='/tw/user/profile'">
         </div>
 
-        <div class = "menu-wrapper">
+        <div class="menu-wrapper">
             <div class="settingsBut">
                 <button class="dropbtn"></button>
                 <div class="settings-content">
@@ -23,7 +22,8 @@
                     <a href="/tw/user/deleteAccount">Delete account</a><br>
                     <a href="/tw/user/logout">Logout</a>
                 </div>
-            </div>​
+            </div>
+            ​
             <a href="/tw/contact">Contact</a>
             <a href="/tw/scores">Scores</a>
             <a href="/tw/user/profile">Home</a>
@@ -32,29 +32,46 @@
 
     </div>
 
-    <div class = "wrapper">
-        <form method="post" action="/tw/kidUser/getTestData"  >
-            <input id = "domainInput"  type="hidden" name="domain" onclick="">
+    <div class="wrapper">
+        <form method="post" action="/tw/kidUser/getTestData">
+            <input id="domainInput" type="hidden" name="domain" onclick="">
             <div class="container">
-                <button name = "matBut" class="math" type="button" onclick="showDifficultyForm();setDomain('MATH')"></button><br>
-                <button name = "bioBut" class="biology" type="button" onclick="showDifficultyForm();setDomain('BIOLOGY')"></button><br>
-                <button name = "geoBut" class="geography" type="button" onclick="showDifficultyForm();setDomain('GEOGRAPHY')"></button><br>
-                <button name = "engBut" class="english" type="button" onclick="showDifficultyForm();setDomain('ENGLISH')"></button><br>
-                <button name = "hisBut" class="history" type="button" onclick="showDifficultyForm();setDomain('HISTORY')"> </button>
+                <button name="matBut" class="math" type="button"
+                        onclick="showDifficultyForm();setDomain('MATH')"></button>
+                <br>
+                <button name="bioBut" class="biology" type="button"
+                        onclick="showDifficultyForm();setDomain('BIOLOGY')"></button>
+                <br>
+                <button name="geoBut" class="geography" type="button"
+                        onclick="showDifficultyForm();setDomain('GEOGRAPHY')"></button>
+                <br>
+                <button name="engBut" class="english" type="button"
+                        onclick="showDifficultyForm();setDomain('ENGLISH')"></button>
+                <br>
+                <button name="hisBut" class="history" type="button"
+                        onclick="showDifficultyForm();setDomain('HISTORY')"></button>
             </div>
 
-            <div id = "difficultyForm" class="difficultyForm">
+            <div id="difficultyForm" class="difficultyForm">
                 Alege dificultatea testului:<br><br>
-                <form method = "post" action = "/tw/test">
-                    <div> <input type="radio" name="difficulty" value="EASY" onclick= "showImageEasy();setDifficulty('EASY')"/><label>Sunt un prescolar micut (Gradinita)</label></div><br>
-                    <div> <input type="radio" name="difficulty" value="NORMAL" onclick= "showImageMed();setDifficulty('MEDIUM')"/><label>Am avansat, dar inca mai am multe de invatat! (I-IV)</label></div><br>
-                    <div><input type="radio" name="difficulty" value="HARD" onclick= "showImageHard();setDifficulty('HARD')"/><label>Nimic nu ma poate opri, vreau un test pentru elevi mari! (V-VII)</label></div>
+                <form method="post" action="/tw/test">
+                    <div><input type="radio" name="difficulty" value="EASY"
+                                onclick="showImageEasy();setDifficulty('EASY')"/><label>Sunt un prescolar micut
+                        (Gradinita)</label></div>
+                    <br>
+                    <div><input type="radio" name="difficulty" value="NORMAL"
+                                onclick="showImageMed();setDifficulty('MEDIUM')"/><label>Am avansat, dar inca mai am
+                        multe de invatat! (I-IV)</label></div>
+                    <br>
+                    <div><input type="radio" name="difficulty" value="HARD"
+                                onclick="showImageHard();setDifficulty('HARD')"/><label>Nimic nu ma poate opri, vreau un
+                        test pentru elevi mari! (V-VII)</label></div>
                 </form>
 
 
-                <div class = "image_start">
-                    <button name = "start" id = "StartBut" class = "StartButton" type="submit">Incepe Testul! </button>
-                    <div id = "imageMed" class = "imageMed"></div>
+                <div class="image_start">
+                    <button name="start" id="StartBut" class="StartButton" type="submit">Incepe Testul!</button>
+                    <div id="imageMed" class="imageMed"></div>
                 </div>
 
             </div>
@@ -62,65 +79,23 @@
     </div>
 
 
-    <div class = "parallax"></div>
+    <div class="parallax"></div>
 
 
-    <div class = "clasamente_wrapper">
+    <div class="clasamente_wrapper">
 
-        <div class  = "last_scores">
-            <div class = "clock_image">
+        <div class="last_scores">
+            <div class="clock_image">
             </div>
             <h3>Ultimele scoruri :</h3>
 
-            <div class = "users_list">
+            <div class="users_list">
 
                 <div class="img5" id="img5"></div>
                 <div class="tabelos">
                     <table id="table">
                         <div id="pageNavPosition" class="pageNavPosition"></div>
-                        <tr>
-                            <th>Username</th>
-                            <th>Score</th>
-                            <th>Domain</th>
-                            <th>Difficulty</th>
-                            <th>Date</th>
-                        </tr>
-                        <tr>
-                            <td>razvanel12</td>
-                            <td>70</td>
-                            <td>Math</td>
-                            <td>Medium</td>
-                            <td>28-04-2017</td>
-                        </tr>
-                        <tr>
-                            <td>codri102</td>
-                            <td>50</td>
-                            <td>Geography</td>
-                            <td>Hard</td>
-                            <td>28-04-2017</td>
-                        </tr>
-                        <tr>
-                            <td>raluralu1</td>
-                            <td>70</td>
-                            <td>English</td>
-                            <td>Medium</td>
-                            <td>28-04-2017</td>
-                        </tr>
-                        <tr>
-                            <td>marinela21</td>
-                            <td>10</td>
-                            <td>Math</td>
-                            <td>Hard</td>
-                            <td>27-04-2017</td>
-                        </tr>
-                        <tr>
-                            <td>alexutz10</td>
-                            <td>60</td>
-                            <td>Biology</td>
-                            <td>Easy</td>
-                            <td>27-04-2017</td>
-                        </tr>
-
+                        {lastScores}
                     </table>
                     <script type="text/javascript"><!--
                     var pager = new Pager('table', 4);
@@ -135,18 +110,24 @@
         </div>
 
 
-        <div class  = "best_averages">
-            <div class = "trophy_image">
-            </div><h3>Top 3 medii ale scorurilor :</h3>
-            <div class = "scores_podium_image">
+        <div class="best_averages">
+            <div class="trophy_image">
+            </div>
+            <h3>Top 3 medii ale scorurilor :</h3>
+
+            {topKids}
+
+            <div class="scores_podium_image">
             </div>
 
         </div>
-        <div class  = "most_accesed">
-            <div class = "test_image">
+        <div class="most_accesed">
+            <div class="test_image">
             </div>
+
             <h3>Top cele mai accesate domenii :</h3>
-            <div class = "tests_podium_image">
+            {topDomains}
+            <div class="tests_podium_image">
             </div>
 
 
@@ -154,48 +135,54 @@
     </div>
 
 
-    <div class= "bottom-first-bar">
-        <div class = "first_bottom_column">
-            <div class = "bottom-logo"></div>
-            <label class = "bottom_column_label"> <p>Just for kids game is one of the most amazing and interactive full of entartaiment quiz game you will find on the internet. JUST for fun!</p></label>
-        </div>
-        <div class = "second_bottom_column"><label class = "bottom_column_label">
-            <h3>NAVIGATION</h3>
-            <div class = "bottom-nav">
-                <a href="#">Acasa</a>
-                <a href="#">Contact</a>
-                <a href="#">Scores</a>
-                <a href="#">About</a>
+    <div class="bottomfooter">
+        <div class="bottom-first-bar">
+            <div class="first_bottom_column">
+                <div class="bottom-logo"></div>
+                <label class="bottom_column_label"><p>Just for kids game is one of the most amazing and interactive full
+                    of entartaiment quiz game you will find on the internet. JUST for fun!</p></label>
+            </div>
+            <div class="second_bottom_column"><label class="bottom_column_label">
+                <h3>NAVIGATION</h3>
+                <div class="bottom-nav">
+                    <a href="/tw/user/profile">Acasa</a>
+                    <a href="/tw/contact">Contact</a>
+                    <a href="/tw/scores">Scores</a>
+
+
+                </div>
+            </label></div>
+            <div class="third_bottom_column"><label class="bottom_column_label">
+                <h3>SOCIAL</h3></label>
+                <div class="socialItems">
+                    <a class="fb" href="https://www.facebook.com/codryn.leonte"><img class="socialFb"
+                                                                                     src="/tw/public/images/fb.png"></a>
+                    <a class="tweet" href="https://twitter.com/"><img class="socialTweet"
+                                                                      src="/tw/public/images/twitter.png"></a>
+                    <a class="google" href="https://google.com"><img class="socialGoogle"
+                                                                     src="/tw/public/images/google.png"></a>
+                    <a class="feed" href="#"><img class="socialFeed" src="/tw/public/images/feed.png"></a>
+                </div>
 
             </div>
-        </label></div>
-        <div class = "third_bottom_column"><label class = "bottom_column_label">
-            <h3>SOCIAL</h3></label>
-            <div class = "socialItems">
-                <a class = "fb"     href="#"><img  class = "socialFb" src="/tw/public/images/fb.png"></a>
-                <a class = "tweet"  href="#"><img class = "socialTweet" src="/tw/public/images/twitter.png"></a>
-                <a class = "google" href="#"><img  class = "socialGoogle" src="/tw/public/images/google.png"></a>
-                <a class = "feed"   href="#"><img class = "socialFeed" src="/tw/public/images/feed.png"></a>
-            </div>
-
+            <div class="fourth_bottom_column"><label class="bottom_column_label">
+                <h3>CONTACT INFORMATION</h3>
+                <p>Titu Maiorescu nr 7, Iasi,Romania<br><br>
+                    codryn96@gmail.com</p>
+            </label></div>
         </div>
-        <div class = "fourth_bottom_column"> <label class = "bottom_column_label">
-            <h3>CONTACT INFORMATION</h3>
-            <p>Titu Maiorescu nr 7, Iasi,Romania<br><br>
-                codryn96@gmail.com</p>
-        </label></div>
-    </div>
 
-    <div class= "bottom-second-bar">
-        <br><label class = "bottom-second-bar-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
+        <div class="bottom-second-bar">
+            <br><label class="bottom-second-bar-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
+        </div>
     </div>
 
 </div>
-
-</body>
 <script src="/tw/public/javascript/javascript.js">
 
 </script>
+</body>
+
 
 
 </html>

@@ -47,18 +47,20 @@ class DeleteAccountController extends  BaseController
             }
 
             if($response == -1 ) {
-                print_r("Username gresit!");
+                $message="Username gresit!";
             }
             else if($response == -2){
-                print_r("Parola incorecta!");
+                $message="Parola incorecta!";
             }
             else if($response == -3){
-                print_r("Parolele nu coincid!");
+                $message="Parolele nu coincid!";
             }
             else{
-                print_r("Ati sters conturile cu succes!");
-                $this->redirect("user/showlogin") ;
+                $message="Ati sters conturile cu succes!";
+                echo "<script type='text/javascript' >alert('$message') ;location.href='/tw/user/showlogin'</script>";
             }
+            echo "<script type='text/javascript' >alert('$message') ;location.href='/tw/user/profile'</script>";
+
 
         }
 

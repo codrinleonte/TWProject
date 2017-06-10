@@ -7,24 +7,42 @@
  * Time: 02:43
  */
 
-require_once ("BLL/Contracts/IScoresBLL.php");
-require_once ("DAL/Implementations/ScoresRepository.php");
+require_once("BLL/Contracts/IScoresBLL.php");
+require_once("DAL/Implementations/ScoresRepository.php");
+
 class ScoresBLL implements IScoresBll
 {
     private $scoresRepo;
-    public function __construct(){
+
+    public function __construct()
+    {
         $this->scoresRepo = new ScoresRepository();
     }
 
-    public function getAll(){
+    public function getAll()
+    {
         $allScores = $this->scoresRepo->getAll();
 
-       // print_r ($_SESSION['user']['USERNAME']);
+        // print_r ($_SESSION['user']['USERNAME']);
         $userScores = $this->scoresRepo->getByUsername($_SESSION['user']['USERNAME']);
-       //print_r ($userScores);
-        exit;
+
         $todayScores = $this->scoresRepo->getByDate(date("d-M-Y"));
 
-        return array("allScores" => $allScores, "userScores"=>$userScores, "todayScores" => $todayScores);
+        return array("allScores" => $allScores, "userScores" => $userScores, "todayScores" => $todayScores);
     }
+
+    public function getLastFiveScores(){
+        return $this->scoresRepo->getLastScores();
+    }
+
+
+    public function getTopKids(){
+        return $this->scoresRepo->getTopKids();
+    }
+
+    public function getTopDomains(){
+        return $this->scoresRepo->getTopDomains();
+    }
+
+
 }

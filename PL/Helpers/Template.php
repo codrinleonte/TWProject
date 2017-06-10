@@ -29,12 +29,14 @@ class Template
             $flags = $explosion['flags'];
             $values = $explosion['values'];
             return str_replace($flags, $values, $this->templateFile);
+
         }
         return $this->templateFile;
     }
 
     public function setFile($file){
         $fileName = "PL/Interface/".$file.".html";
+
         if(!file_exists($fileName)) exit("Template error: File {$fileName} doesn't exist!");
         $this->templateFile = file_get_contents($fileName);
     }

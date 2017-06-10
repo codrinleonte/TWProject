@@ -72,16 +72,18 @@ function showScore() {
     }
 
     var http = new XMLHttpRequest();
-    var url = "/tw/test/insert";
-    var params = "score="+score+"&test="+testId;
+    var url = "/tw/test/insertScore";
+    var params = "score="+score+"&testId="+testId;
     http.open("POST", url, true);
+
 
 //Send the proper header information along with the request
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     http.onreadystatechange = function() {//Call a function when the state changes.
         if(http.readyState == 4 && http.status == 200) {
-            alert(http.responseText);
+            //alert(http.responseText);
+           // alert("");
         }
     }
     http.send(params);

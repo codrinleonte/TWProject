@@ -34,12 +34,12 @@ class OracleDB
         //echo $params;
         $stid = oci_parse($this->conn,$query);
 //        $stid = oci_parse($this->conn,"SELECT * FROM TABLE WHERE ID=:ID");
-       /* print_r("<br>");print_r("<br>");
+     /*  print_r("<br>");print_r("<br>");
         print_r($query);
         print_r("     ");
         print_r($params);
-        print_r("<br>");print_r("<br>");
-        exit(1);*/
+        print_r("<br>");print_r("<br>");*/
+        //exit(1);
         if(!empty($params)){
             foreach($params as $paramName=>$paramValue){
                 oci_bind_by_name($stid, ":".$paramName, $params[$paramName]); //
@@ -111,8 +111,8 @@ class OracleDB
 
     public function deleteRow($table, $condition, $params){
         print_r("DELETE FROM {$table} WHERE {$condition}");
-        print_r("<br>");
-        print_r($params);
+      //  print_r("<br>");
+       // print_r($params);
         return $this->doQuery("DELETE FROM {$table} WHERE {$condition}", $params);
     }
 

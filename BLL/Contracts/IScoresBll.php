@@ -8,4 +8,8 @@
 
 interface IScoresBll{
     public function getAll();
+    public function getLastFiveScores();
+    public function getTopKids();
+    public function getTopDomains();
+
 }

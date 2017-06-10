@@ -40,6 +40,5 @@ class BaseController
 
     public function loadView($view, $data=[]){
         echo $this->renderView($view, $data);
-        exit();
     }
 }

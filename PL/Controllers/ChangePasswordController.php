@@ -33,15 +33,20 @@ class ChangePasswordController extends BaseController
            $typedNewPassword = $_POST['newPass'];
            $retypedOldPassword = $_POST['newPassRetyped'];
                if(!$this->userBll->validateKidPassword($current_id,$typedOldPassword)){
-                   print_r("Parola veche introdusa ete gresita!");
+                   $message="Parola veche introdusa este gresita!";
+
+
                }
                else if($typedNewPassword !=  $retypedOldPassword){
-                   print_r("Parolele nu coincid!");
+                   $message="Parolele nu coincid!";
+
                }
                else{
                     $this->userBll->updateKidPassword($current_id,$typedNewPassword);
-                    $this->redirect("user/profile") ;
+                    $message="Parola a fost schimbata cu succes!";
                }
+            echo "<script type='text/javascript' >alert('$message') ;location.href='/tw/user/profile'</script>";
+
 
     }
 

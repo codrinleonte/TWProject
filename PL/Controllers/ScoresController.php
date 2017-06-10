@@ -11,11 +11,13 @@ require_once ("BLL/Implementations/ScoresBLL.php");
 class ScoresController extends BaseController
 {
     private $scoresBll;
+    private $testBll;
 
     public function __construct()
     {
         parent::__construct();
         $this->scoresBll = new ScoresBLL();
+
     }
 
     public function index(){
@@ -23,7 +25,8 @@ class ScoresController extends BaseController
         $tabelToateScorurile = $this->renderTable($scoresArray['allScores']);
         $tabelScoruriUser = $this->renderTable($scoresArray['userScores']);
         $tabelScoruriAzi = $this->renderTable($scoresArray['todayScores']);
-        $this->loadView("html/Shared/scores", array("tabelToateScorurile"=> $tabelToateScorurile, "tabelScoruriUser"=>$tabelScoruriUser, "tabelScoruriAzi"=>$tabelScoruriAzi));
+        $this->loadView("html/Shared/scores",
+            array("tabelToateScorurile"=> $tabelToateScorurile, "tabelScoruriUser"=>$tabelScoruriUser, "tabelScoruriAzi"=>$tabelScoruriAzi));
     }
 
     private function renderTable($table)
@@ -43,4 +46,5 @@ class ScoresController extends BaseController
         $table = $this->renderView("templates/tables/template.tabel.scoruri", array("rows"=>$tableRows));
         return $table;
     }
+
 }

@@ -43,6 +43,8 @@ class UserController extends BaseController
        // echo("\n");
         //$user = $this->userBll->checkKidsLogin($username, $password);
         //echo($user);
+
+
         if( $type == 1){
             $user = $this->userBll->checkKidsLogin($username, $password);
             if($user) {

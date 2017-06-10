@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/tw/public/css/kidsFirstPage.css?ver=2">
+    <link rel="stylesheet" type="text/css" href="/tw/public/css/kidsFirstPage.css?ver=4">
     <meta charset="utf-8">
 
 </head>
@@ -41,7 +41,7 @@
         <div class="answersWrapper">
             <button id="startTest" class="startTest" type="button" onclick="showTestForm()" \>START TEST!</button>
             <div id="answersForm" class="answers">
-                <form>
+                <form action = "/tw/test/insertScore" method = "POST">
                     <div class="answersTop">
                         <input id="answerA" name="answer" type="radio" checked="true" value="1"/><label id ="answerALabel">Raspuns a</label>
                         <input id="answerB" name="answer" type="radio" value="2"/><label id ="answerBLabel">Raspuns b</label></div>
@@ -52,7 +52,7 @@
                     <br>
 
                     <div class="buttonsContainer">
-                        <button id="finishButton" class="finishButton" type="button" onclick="showScore()" \>Finish
+                        <button name  = "finish" id="finishButton" class="finishButton" type="button" onclick="showScore()" \>Finish
                             Test!
                         </button>
                         <button id="nextButton" class="nextButton" type="button" onclick="nextQuestion()" \>Next
@@ -94,7 +94,7 @@
 <div class="bottom-second-bar">
     <br><label class="bottom-second-bar-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
 </div>
-<script src="/tw/public/javascript/javascript.js?ver=2" charset="utf-8"></script>
+<script src="/tw/public/javascript/javascript.js?ver=4" charset="utf-8"></script>
 {jsBottom}
 </body>
 </html>

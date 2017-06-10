@@ -5,22 +5,25 @@
  * Date: 6/4/2017
  * Time: 10:27 PM
  */
-require_once  ("BLL/Contracts/ITestMaker.php");
+require_once  ("BLL/Contracts/ITestBLL.php");
 require_once  ("DAL/Implementations/QuestionsRepository.php");
 require_once  ("DAL/Implementations/AnswersRepository.php");
 require_once  ("DAL/Implementations/TestRepository.php");
-class TestsBLL implements ITestMaker
+require_once  ("DAL/Implementations/ScoresRepository.php");
+class TestsBLL implements ITestBLL
 {
 
     private $questionsRepo;
     private $answersRepo;
     private $testRepo;
+    private $scoreRepo;
 
     public function __construct(){
 
         $this->questionsRepo=new QuestionsRepository();
         $this->answersRepo=new AnswersRepository();
         $this->testRepo=new TestRepository();
+        $this->scoreRepo = new ScoresRepository();
 
     }
 
@@ -75,6 +78,14 @@ class TestsBLL implements ITestMaker
     }
 
 
+    public function insertScore($score, $testId, $kidId)
+    {
+        $lastScoreId = $this->scoreRepo->getLastId();
+
+        (int )$scoreId = (int)$lastScoreId[0]['SCORE_ID'] + 1 ;
+        $this->scoreRepo->insert(array("SCORE_ID" => $scoreId, "TEST_ID" => "'".$testId."'" , "KID_USER_ID" => $kidId, "SCORE" => $score,
+            "TEST_DATE" => "SYSDATE"));
+    }
 
 
 }

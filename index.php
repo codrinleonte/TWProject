@@ -26,11 +26,12 @@ if(!isset($_GET['route']) || empty($_GET['route'])){
     if($method == "") {
         $controller->index();
     } else {
-        if(!method_exists($controller, $method)) exit("Method {$method} doesn't exhist!");
+        if(!method_exists($controller, $method)) exit("Method {$method} doesn't exist!");
         $args = array();
         for($i=2; $i<count($route); $i++){
             array_push($args, $route[$i]);
         }
+
         call_user_func_array(array($controller, $method), $args);
     }
 

@@ -144,11 +144,10 @@ html, body {
 }
 
 .scores_podium_image {
-    content: url("/tw/public/images/42913.png");
-    width: 250px;
-    height: 240px;
+    content: url("/tw/public/images/429132.png");
+    width: 200px;
+    height: 150px;
     margin: 0 auto;
-
 }
 
 .test_image {
@@ -159,9 +158,9 @@ html, body {
 }
 
 .tests_podium_image {
-    content: url("/tw/public/images/testPod.png");
+    content: url("/tw/public/images/testPod2.png");
     width: 300px;
-    height: 200px;
+    height: 100px;
     margin: 0 auto;
     margin-top: 50px;
 
@@ -525,8 +524,9 @@ input[type='radio']:checked:before {
 }
 
 .users_list {
-    margin-top: 80px;
+    margin-top: 10px;
     margin-left: 30px;
+
 }
 
 table {
@@ -615,10 +615,11 @@ th {
 }
 
 .question {
+
     color: black;
     font-family: "Georgia";
     font-size: 20px;
-    z-index: 2;
+    z-index:1;
     position: absolute;
     margin-top: 130px;
     margin-left: 170px;
@@ -823,4 +824,8 @@ th {
 
 .tweetShare {
     margin-top: 20px;
+}
+
+.bottomfooter{
+    position:absolute;
 }
