@@ -14,16 +14,16 @@
 	<div class = "top-nav">
 	<div class = "top-logo"></div>
 	<div class = "settingsBut">
-		<button class="dropbtn"></buton>
+		<button class="dropbtn"></button>
 		<div class = "settings-content">
-			<a href = "#">Change password</a><br>
-			<a href = "#">Logout</a>
+			<a href = "changePsw.php">Change password</a><br>
+			<a href = "adminLogin.php">Logout</a>
 		</div>
 	</div>
 	<a href = "statistics.php">Statistics</a>
 	<a href = "add-test.php">Add new test</a>
 	<a href = "notification.php">Notification</a>
-	<a href = "admin-first-page.html">Home</a>
+	<a href = "admin-first-page.php">Home</a>
 	
 </div>
 </div>
@@ -35,9 +35,16 @@
             <?php
     include("dbconnect.php");
         
-            
-        
-         
+           session_start();
+
+       if(!isset($_SESSION['login'])){
+     header("Location: 404.php");
+}
+    
+    $username = $_SESSION['login'];
+    
+    
+    
             if(isset($_POST['send'])){
                  $question1 = $_POST['question1'];
                  $question2 = $_POST['question2'];
@@ -46,8 +53,15 @@
                  $question5 = $_POST['question5'];
                  $question6 = $_POST['question6'];
                  $question7 = $_POST['question7'];
+                $username = $_SESSION['login'];
                 
+                $sql_adm = oci_parse($conn, "select ADMIN_USER_ID FROM ADMIN_USERS WHERE USERNAME ='$username'");
+                oci_execute($sql_adm);
                 
+                if(ociFetch($sql_adm)){
+                    $proposer_id1 = ociresult($sql_adm, 1);
+                }
+                    
                 $domain = $_POST['domain'];
                 $difficulty =$_POST['difficulty'];
                
@@ -94,14 +108,13 @@
                          $answer_id6 = "a".((string)$a_id+6);
                          $answer_id7 ="a".((string)$a_id+7);
                     }
-            
-                $proposer_id = 36;;
+            $proposer_id = 34;
                 $active = 1;
                 $solved = 0;
                 $exist = 1;
                 $sqt = oci_parse($conn, "INSERT INTO PROPOSED_TESTS(TEST_ID, PROPOSER_ID, DOMAIN_ID, ACTIVE) VALUES (:mtest_id, :mproposer_id, :mdomain_id, :mactive)");
                 oci_bind_by_name($sqt, ':mtest_id',$test_id);
-                oci_bind_by_name($sqt, ':mproposer_id',$proposer_id);
+                oci_bind_by_name($sqt, ':mproposer_id',$proposer_id1);
                 oci_bind_by_name($sqt, ':mdomain_id',$domain_id);
                 oci_bind_by_name($sqt, ':mactive',$active);
                     oci_execute($sqt);

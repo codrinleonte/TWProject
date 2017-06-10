@@ -16,14 +16,14 @@
 	<div class = "settingsBut">
 		<button class="dropbtn"></buton>
 		<div class = "settings-content">
-			<a href = "#">Change password</a><br>
-			<a href = "#">Logout</a>
+			<a href = "changePsw.php">Change password</a><br>
+			<a href = "adminLogin.php">Logout</a>
 		</div>
 	</div>
 	<a href = "statistics.php">Statistics</a>
 	<a href = "add-test.php">Add new test</a>
 	<a href = "notification.php">Notification</a>
-	<a href = "admin-first-page.html">Home</a>
+	<a href = "admin-first-page.php">Home</a>
 	
 </div>
 </div>
@@ -38,6 +38,11 @@
 					
 				</div>
             <?php
+        session_start();
+
+         if(!isset($_SESSION['login'])){
+     header("Location: 404.php");
+}
              include("dbconnect.php");
               
                   
@@ -48,11 +53,13 @@
         <?php 
             $sql_kid = oci_parse($conn,"select * from (select * from kids_users where active=1) where rownum <10");
             oci_execute($sql_kid);
+       
                               
                               
         ?>
 				<div id="getKids" style="display:none;" class="table-content">
-				<table>
+                    <div class= "tabelkids" >
+				<table id = "table1">
                         <tr>
                           <th>Name</th>
                           <th>Do you want to delete this user?</th>
@@ -88,7 +95,19 @@
                     
                     ?>
                       </table>
+                    
+                    
+                    <div id="pageNavPosition1" class="pageNavPosition1"></div>
+
+                               <script type="text/javascript"><!--
+                                  var pager1 = new Pager('table1', 3);
+                               pager1.init();
+                               pager1.showPage(1);
+                               pager1.showPageNav('pager1', 'pageNavPosition1');
+                              //--></script>
+                              
 				</div>
+        </div>
         <?php 
             $sql_par = oci_parse($conn,"select * from (select * from parents_users where active=1) where rownum <10");
             oci_execute($sql_par);
@@ -96,7 +115,7 @@
                               
         ?>
 				<div id="getParents" style="display:none;" class="table-content">
-				<table>
+				<table id="table2">
                         <tr>
                           <th>Name</th>
                           <th>Do you want to delete this parent?</th>
@@ -131,6 +150,15 @@
                     
                     ?>
                       </table>
+                    
+                    <div id="pageNavPosition2" class="pageNavPosition2"></div>
+
+                               <script type="text/javascript"><!--
+                                  var pager2 = new Pager('table2', 3);
+                               pager2.init();
+                               pager2.showPage(1);
+                               pager2.showPageNav('pager', 'pageNavPosition1');
+                              //--></script>
 				</div>
 
 				   
@@ -169,9 +197,7 @@
 				   
 		 
 		 
-				  <div class= "bottom-second-bar">
-      <br><label class = "bottom-label">2017 ©Codrin's Leonte team | All Rights Reserved.</label>
-  </div>
+				 
               
 
 </body>

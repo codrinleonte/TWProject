@@ -2,36 +2,34 @@
 <?php
 include("dbconnect.php");
 
+session_start(); session_destroy();
+
 if(isset($_POST['login'])){
+  
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     
-    $sql_admin = "SELECT * FROM ADMIN_USERS WHERE Username = '$email' and Pass = '$pass'"; 
+    $sql_admin = "SELECT USERNAME, PASS FROM ADMIN_USERS WHERE Username = '$email' and Pass = '$pass'"; 
     $stia = oci_parse($conn, $sql_admin);
+    oci_execute($stia);
     
     if (ociFetch($stia))
     {
- $uname_a =  ociresult($stia, "USERNAME");
- $pass_a =  ociresult($stia, "PASS");
+ $uname_a =  ociresult($stia, 1);
+ $pass_a =  ociresult($stia, 2);
    
      if( $_POST['pass'] = $pass_a)
-     {
+     {   session_start();
          $_SESSION['login']=$uname_a; 
- header("Location: admin-first-page.html");
+ header("Location: admin-first-page.php");
         
     }
         else{
              echo "<script type='text/javascript'>alert('Failed! Please verify your  password!')</script>";}
             
-    }
-    
-    
-    
+    }   
     
 }
-
-
-
 
 ?>
 

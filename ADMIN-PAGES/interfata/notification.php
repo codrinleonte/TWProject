@@ -7,15 +7,16 @@
 
 <body> 
     <?php
+   session_start();
 
+      if(!isset($_SESSION['login'])){
+     header("Location: 404.php");
+}
+   
     include("dbconnect.php");
     $sql = "select parents_users.username, domains.domain, domains.difficulty, proposed_tests.test_id from parents_users join proposed_tests  on parents_users.parent_user_id= proposed_tests.proposer_id join domains  on domains.domain_id = proposed_tests.domain_id where proposed_tests.active = 0 ";
     $stid = oci_parse($conn, $sql);
     oci_execute($stid);
-    
-    
-    
-    
     ?>
 
 	<div class = "pageWrap">
@@ -24,8 +25,8 @@
 	<div class = "settingsBut">
 		<button class="dropbtn"></button>
 		<div class = "settings-content">
-			<a href = "#">Change password</a><br>
-			<a href = "#">Logout</a>
+			<a href = "changePsw.php">Change password</a><br>
+			<a href = "adminLogin.php">Logout</a>
 		</div>
 	</div>
 	<a href = "statistics.php">Statistics</a>
