@@ -16,6 +16,8 @@ class TestController extends BaseController
     public function __construct()
     {
         $this->testBLL = new TestsBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
     }
 
     public function index()

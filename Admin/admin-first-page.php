@@ -1,8 +1,19 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['login'])){
+     header("Location: 404.php");
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 
-    <link rel="stylesheet" type="text/css" href="/tw/public/css/admin-first-page.css">
+    <link rel="stylesheet" type="text/css" href="/tw/public/css/style.css">
 </head>
 
 <body > 
@@ -13,14 +24,14 @@
 	<div class = "settingsBut">
 		<button class="dropbtn"></buton>
 		<div class = "settings-content">
-			<a href = "../Shared/change-password.html">Change password</a><br>
-			<a href = "../Shared/login.html">Logout</a>
+			<a href = "changePsw.php">Change password</a><br>
+			<a href = "adminLogin.php"  >Logout</a>
 		</div>
 	</div>
-	<a href = "../Shared/statistics.html">Statistics</a>
-	<a href = "../Shared/add-test.html">Add new test</a>
-	<a href = "notification.html">Notification</a>
-	<a href = "admin-first-page.html">Home</a>
+	<a href = "statistics.php">Statistics</a>
+	<a href = "add-test.php">Add new test</a>
+	<a href = "notification.php">Notification</a>
+	<a href = "admin-first-page.php">Home</a>
 	
 </div>
 </div>

@@ -1,45 +1,45 @@
 html, body{
-  margin: 0;
-  min-height: 100%;
-  background-color: #2b8ac2;
+    margin: 0;
+    min-height: 100%;
+    background-color: #2b8ac2;
 }
 .parallax {
-  
+
     background-image: url("/tw/public/images/4FPllju-cartoon-network-backgrounds.jpg");
-    min-height: 500px; 
+    min-height: 500px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
+
 }
 
 .top-nav {
 
-  overflow: hidden;
-  background-color: #40464B;
-  height:60px;
+    overflow: hidden;
+    background-color: #40464B;
+    height:60px;
 
 }
 
 
 .top-nav a {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 20px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: "Georgia";
-  transition:  color 1s, background-color 1s , font-size 1s;
-  
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Georgia";
+    transition:  color 1s, background-color 1s , font-size 1s;
+
 }
 
 .top-nav a:hover {
-  
-  color:#6680CC;
-  font-size:19px;
+
+    color:#6680CC;
+    font-size:19px;
 }
 
 .top-nav a:active {
@@ -48,8 +48,9 @@ html, body{
 
 }
 .footer{
-  top: 20%;
-  position: relative;
+    /*top: 20%;*/
+    position: absolute;
+    /*margin-top:700px;*/
 }
 
 .bottom-second-bar {
@@ -59,7 +60,7 @@ html, body{
     width:100%;
     z-index: 100;
     top: 100%;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
 }
 
@@ -78,69 +79,69 @@ html, body{
     width:100%;
     position:relative;
     left: 0;
-    bottom: 0; 
-   
+    bottom: 0;
+
 }
 
 .first_bottom_column, .second_bottom_column, .third_bottom_column, .fourth_bottom_column{
-  float:left;
-  margin: 0 auto;
-  overflow:hidden;
-  width: 24%;
-  margin-top: 30px;
-  text-align: center;
+    float:left;
+    margin: 0 auto;
+    overflow:hidden;
+    width: 24%;
+    margin-top: 30px;
+    text-align: center;
 }
 
 .first_bottom_column{
-  margin-left: 3%;
-  float:left;
+    margin-left: 3%;
+    float:left;
 }
 
 .bottom-logo{
-  background-image: url("/tw/public/images/logo.png");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  width:300px;
-  height:150px;
+    background-image: url("/tw/public/images/logo.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    width:300px;
+    height:150px;
 
 }
 
 
 .bottom_column_label{
-  height: 400px;
-  color:white;
-  font-size: 15px;
-  text-align: center;
-  font-family: "Georgia";
-  margin: 0 auto;
-  
+    height: 400px;
+    color:white;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Georgia";
+    margin: 0 auto;
+
 }
 
 
 .wrapper{
-     height:auto !important;
-     min-height:100%;
+    height:auto !important;
+    min-height:100%;
 }
 
 
 
 
 .dropbtn {
-  
+
     padding: 10px 12px;
     border: none;
     margin-top: 20px;
     cursor: pointer;
     background: url("/tw/public/images/FEZ-04-512.png");
-    background-size:     cover;                     
+    background-size:     cover;
     background-repeat:   no-repeat;
-    background-position: center center;  
+    background-position: center center;
 }
 
 .settingsBut {
     float:right;
-  
+
     margin-right: 200px;
     margin-left: 10px;
 }
@@ -149,19 +150,19 @@ html, body{
     display: none;
     position: absolute;
     width:150px;
-    
+
     z-index: 1;
     background-color:#40464B;
-   
+
 }
 
 .settings-content a {
     color:#E6E6E6;
-   
+
     height: 10px;
-    
+
     text-decoration: none;
-    
+
     font-size: 15px;
     font-family: "Georgia";
     background-color:#40464B;
@@ -179,25 +180,25 @@ html, body{
 .settingsBut:hover .settings-content {
     display: block;
     color: #E6E6E6;
-  
-    
+
+
 }
 
 .top-logo{
-  background-image: url("/tw/public/images/logo.png");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  width:120px;
-  height:60px;
-  margin-left: 5%;
-  float:left;
-  cursor: pointer;
+    background-image: url("/tw/public/images/logo.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    width:120px;
+    height:60px;
+    margin-left: 5%;
+    float:left;
+    cursor: pointer;
 }
 
 
 
- .socialItems a{  
+.socialItems a{
     display: inline-block;
     margin-top: 20px;
     width: 30px ;
@@ -209,51 +210,51 @@ html, body{
 
 
 .fb:hover{
-  background-color: #3B5998;
+    background-color: #3B5998;
 }
 
 .google:hover{
-  background-color: #D75030;
+    background-color: #D75030;
 }
 .tweet:hover{
-  background-color: #55ACEE;
+    background-color: #55ACEE;
 }
 
 .feed:hover{
-  background-color: #F69A1D;
+    background-color: #F69A1D;
 }
 
 
 .socialFb,.socialTweet,.socialFeed,.socialGoogle{
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 
 
 .bottom-nav {
 
- 
+
 
 }
 
 
 .bottom-nav a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10px 8px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: "Georgia";
-  transition:  color 1s, background-color 1s , font-size 1s;
-  
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 8px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Georgia";
+    transition:  color 1s, background-color 1s , font-size 1s;
+
 }
 
 .bottom-nav a:hover {
-  
-  color:#6680CC;
-  font-size:19px;
+
+    color:#6680CC;
+    font-size:19px;
 }
 
 
@@ -264,33 +265,33 @@ html, body{
     margin-bottom :100px;
     display: inline-block;
     width:100%;
-    height: 100%; 
+    height: 100%;
     margin-bottom: 10px;
 
 }
 .img{
-   width: 300px;
-   height: 141px;
-   position: relative;
-   margin: 0 auto;
-   background-image: url("/tw/public/images/simpson.png");
-  
+    width: 300px;
+    height: 141px;
+    position: relative;
+    margin: 0 auto;
+    background-image: url("/tw/public/images/simpson.png");
+
 }
 
 
 .firsthalf{
-  width: 40%;
-  position: relative;
-  margin: 0 auto;
-  height: 30%;
-
+    width: 40%;
+    position: relative;
+    margin-left: 33%;
+    height: 30%;
+    z-index: 3;
 }
 
 .lasthalf{
-  width: 100%;
-  height: 50%;
-   position: relative;
-  margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    position: relative;
+    margin: 0 auto;
 }
 
 .buton{
@@ -298,16 +299,16 @@ html, body{
     display: inline-block;
     width: 170px;
     height: 160px;
-   
-    
+
+
 
     border: none;
     color: white;
-   
+
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    
+
 }
 
 
@@ -316,133 +317,133 @@ html, body{
 }
 
 .your{
-  border-radius: 10px 5px 5px 70px;
+    border-radius: 10px 5px 5px 70px;
 }
 .other{
-   border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 .all{
-  border-radius: 5px 10px 70px 5px;
+    border-radius: 5px 10px 70px 5px;
 }
 
 
 .yourkidbtn{
-  width: 100%;
+    width: 100%;
     height: 100%;
 
-     border-radius: 10px 5px 5px 70px;
-     padding: 20px 16px;
-     text-decoration: none;
-     font-size: 22px;
-     font-family: "Georgia";
-     color: steelblue;
-     
+    border-radius: 10px 5px 5px 70px;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: "Georgia";
+    color: steelblue;
+
 }
 
 .otherkidbtn{
-  width: 100%;
+    width: 100%;
     height: 100%;
-     border-radius: 5px 5px 5px 5px;
-     padding: 20px 16px;
-     text-decoration: none;
-     font-size: 22px;
-     font-family: "Georgia";
-     color: steelblue;
+    border-radius: 5px 5px 5px 5px;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: "Georgia";
+    color: steelblue;
 }
 
 .allkidbtn{
-  width: 100%;
+    width: 100%;
     height: 100%;
-     border-radius: 5px 10px 70px 5px;
-     padding: 20px 16px;
-     text-decoration: none;
-     font-size: 22px;
-     font-family: "Georgia";
-     color: steelblue;
+    border-radius: 5px 10px 70px 5px;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: "Georgia";
+    color: steelblue;
 }
 
 .tabel{
 
-  width: 100%;
-  height: 100%;
-  
+    width: 100%;
+    height: 100%;
 
-   
+
+
 }
 
-/*.tabel3{*/
-    /*margin-top: -30%;*/
-/*}*/
+.tabel3{
+    /*margin-top: -22%;*/
+}
 .tabelos{
 
-  width:44%;
-  position: relative;
-  margin: 0 auto;
+    width:44%;
+    position: relative;
+    margin: 0 auto;
 }
 
 .pageNavPosition{
-  display: none;
+    display: none;
 }
 
 .img5{
-   width: 100px;
-   height: 340px;
-   float: left;
-   background-image: url("/tw/public/images/bugs.png");
-    background-size:     cover;                     
+    width: 100px;
+    height: 340px;
+    float: left;
+    background-image: url("/tw/public/images/bugs.png");
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
     margin-left: 274px;
     display: none;
- }
+}
 
- .img6{
-   width: 300px;
-   height: 171px;
-   float: right;
-   background-image: url("/tw/public/images/daffy.png");
-    background-size:     cover;                     
+.img6{
+    width: 300px;
+    height: 171px;
+    float: right;
+    background-image: url("/tw/public/images/daffy.png");
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
     margin-right: 80px;
     display: none;
- }
+}
 
 
 .pg-normal {
-      cursor: pointer;
-      
-      padding: 8px 16px;
-      background: linear-gradient(#025d8c,#01537e);
-      display: inline-block;
-      border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
 
-      }
+    padding: 8px 16px;
+    background: linear-gradient(#025d8c,#01537e);
+    display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+
+}
 
 .pg-normal:hover {
     box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
     transition: 0.4s;
     color:#fff;
-   }   
+}
 .pg-selected {
     color: white;
-     padding: 8px 16px;
-    font-weight: bold;        
+    padding: 8px 16px;
+    font-weight: bold;
     background: linear-gradient(red, black);
     cursor: pointer;
     border-radius: 50%;
-    }
- .prev{
-     cursor: pointer;
+}
+.prev{
+    cursor: pointer;
 
-     padding: 8px 16px;
-     background: linear-gradient(#025d8c,#01537e);
-     display: inline-block;
-     border-radius: 5px 5px 5px 5px;
-     border-radius: 5px 5px 5px 40px;
-      margin-left: 188px; 
-      
- }
+    padding: 8px 16px;
+    background: linear-gradient(#025d8c,#01537e);
+    display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 40px;
+    margin-left: 188px;
+
+}
 
 .prev:hover {
     box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -456,25 +457,25 @@ html, body{
     color:#fff;
 }
 
- .next{
-     cursor: pointer;
+.next{
+    cursor: pointer;
 
-     padding: 8px 16px;
-     background: linear-gradient(#025d8c,#01537e);
-     display: inline-block;
-     border-radius: 5px 5px 5px 5px;
-   border-radius: 5px 5px 40px 5px;
- }
+    padding: 8px 16px;
+    background: linear-gradient(#025d8c,#01537e);
+    display: inline-block;
+    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 40px 5px;
+}
 
-          
+
 table {
-    
+
     width: 100%;
-  
-     position: relative;
-     margin: 0 auto;
+
+    position: relative;
+    margin: 0 auto;
     display: none;
-    
+
 }
 
 th, td {
@@ -490,61 +491,57 @@ tr:nth-child(odd){background-color: #ddd}
 th {
     background-color: slategray;
     color: white;
-  
+
 }
 
 
 
 .boximg{
-  width: 100%;
-  height: 100%;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 
 .img2{
-   width: 426px;
-   height: 492px;
-   float: left;
-   background-image: url("/tw/public/images/sullivan.png");
-    background-size:     cover;                     
+    width: 33%;
+    height: 577px;
+    float: left;
+    background-image: url("/tw/public/images/sullivan.png");
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
-    margin-top: -20%
-   
- }
+    margin-top: -20%;
+}
 
- .img3{
-   width: 315px;
-   height: 300px;
-   float: left;
-   position: relative;
+.img3{
+    width: 315px;
+    height: 300px;
+    float: left;
+    position: relative;
     border-radius: 50%;
     background: linear-gradient(red, black);
-    text-align: center ;
-  font-size: 50px;
-  
-  color: #fff;
-   font-family: cursive;
-   font-weight: bold;
-   margin-left: 94px;
-    
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    font-family: cursive;
+    font-weight: bold;
+    margin-left: 32px;
+}
+.img3 p{
+    top: 50%;
+}
 
- }
-   .img3 p{
-      top: 50%;
- }
-
- .img4{
-   width: 486px;
-   height: 463px;
-   float: right;
-   background-image: url("/tw/public/images/patrik.png");
-    background-size:     cover;                     
+.img4{
+    width: 33%;
+    height: 550px;
+    float: right;
+    background-image: url("/tw/public/images/patrik.png");
+    background-size:     cover;
     background-repeat:   no-repeat;
     background-position: center center;
-     margin-top: -20%
- }
+    margin-top: -20%;
+}
 
 .pg-normal{
     display:  none;

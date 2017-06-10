@@ -7,9 +7,10 @@
  * Time: 5:49 PM
  */
 
+
 include ("BLL/Contracts/ITestBLL.php");
 include ("DAL/Implementations/TestRepository.php");
-class TestBLL implements  ITestBLL
+class TestBLL
 {
 
     private $testRepo;

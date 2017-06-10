@@ -17,6 +17,8 @@ class ScoresController extends BaseController
     {
         parent::__construct();
         $this->scoresBll = new ScoresBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
 
     }
 

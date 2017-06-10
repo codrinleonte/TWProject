@@ -27,7 +27,7 @@ class UserController extends BaseController
             $template = "kidUser/index";
         }
         else{
-            $template = "parentUser/index";
+            $template = "domains/index";
         }
         $this->redirect($template);
     }
@@ -83,5 +83,9 @@ class UserController extends BaseController
     }
     public function deleteAccount(){
         $this->redirect("deleteAccount/index");
+    }
+
+    public function admin(){
+        $this->redirect();
     }
 }

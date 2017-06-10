@@ -49,9 +49,9 @@ class ParentsUsersRepository implements IParentsUsersRepository
         return $user?$user:false;
     }
 
-    public function updatePassword($kidUser, $conditionParams)
+    public function updatePassword($parentUser, $conditionParams)
     {
-        return $this->oracleDB->updateRow($this->table, $kidUser,$conditionParams);
+        return $this->oracleDB->updateRow($this->table, $parentUser,$conditionParams);
     }
 
 

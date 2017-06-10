@@ -16,6 +16,8 @@ class CompleteATestController  extends BaseController
     public function __construct(){
         parent::__construct();
         $this->testMaker = new TestsBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
 
 }
 

@@ -25,7 +25,7 @@ class KidUserController extends BaseController
         $this->testBll = new TestsBLL();
         $this->scoreBll = new ScoresBLL();
         if(!isset($_SESSION['user']))
-            $this->redirect("");
+            $this->redirect("error/index");
 
     }
 

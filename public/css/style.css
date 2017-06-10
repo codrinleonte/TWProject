@@ -103,7 +103,7 @@ ul.mail-list li span.mail-message-preview{
 
 
 html { 
-  background: url("/tw/public/images/hminion.jpg") no-repeat center center fixed;
+  background: url("../images/hminion.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -133,7 +133,7 @@ html {
 
 }
 .top-logo{
-  background-image: url("/tw/public/images/logo.png");
+  background-image: url("../images/logo.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
@@ -141,7 +141,6 @@ html {
   height:60px;
   margin-left: 3%;
   float:left;
-  cursor:pointer;
 }
 
 
@@ -191,7 +190,7 @@ html {
     border: none;
     margin-top: 20px;
     cursor: pointer;
-    background: url("/tw/public/images/FEZ-04-512.png");
+    background: url("../images/FEZ-04-512.png");
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position: center center;  
@@ -363,6 +362,7 @@ textarea{
    margin-bottom: 30px;
    background: 	#800000; 
 margin-top:10px;
+    margin-left:245px;
 	opacity: 0.97;
 
 }
@@ -409,7 +409,7 @@ height:500px;
 .domain{
    font-family: "Georgia";
    float:left;
-    height:250px;
+    height:300px;
    font-size: 10px;  
    width:245px;
    margin-right: 15px;
@@ -419,6 +419,22 @@ height:500px;
      background: 	#800000; 
 	 opacity: 0.97;
 }
+
+
+.difficulty{
+   font-family: "Georgia";
+   float:left;
+    height:350px;
+   font-size: 10px;  
+   width:245px;
+   margin-right: 15px;
+   margin-top:10px;
+    border-radius:  5px 5px 50px 50px;
+    color: #FFFFFF;
+     background: 	#800000; 
+	 opacity: 0.97;
+}
+
  input[type='radio'] {
   -webkit-appearance:none;
   width:25px;

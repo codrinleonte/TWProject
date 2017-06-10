@@ -16,4 +16,11 @@ interface ITestRepository
     public function getQuestionId();
     public function getAnswerId();
     public function getAvailableTests($domain,$difficulty,$kidID);
+
+
+    public function insertTest($testId,$proposerId,$domainId);
+    public function insertQuestion($questionId,$testId,$domainId,$question);
+    public function insertAnswer($answerId,$questionId,$corect,$wrong1,$wrong2,$wrong3);
+
+    public function getDomainIdByDomainDifficulty($domain,$difficulty);
 }

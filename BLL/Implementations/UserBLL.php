@@ -76,6 +76,14 @@ class UserBLL implements IUserBLL
 
     }
 
+    public function updateParentPassword($id, $password)
+    {
+        $parentUser = array("PASS" => $password);
+
+        return $this->parentRepo->updatePassword($parentUser, array("PARENT_USER_ID" => $id));
+
+    }
+
     /**
      * @param $username
      * @param $password

@@ -8,6 +8,7 @@
  */
 require_once ("BaseController.php");
 require_once ("BLL/Implementations/TestBLL.php");
+
 class AddTestController extends BaseController
 {
     public $question1,$answer_good1,$answer_wrong11,$answer_wrong21,$answer_wrong31;
@@ -20,10 +21,14 @@ class AddTestController extends BaseController
     public $domeniu,$dificultate;
     private $testBll;
 
+
     public function __construct()
     {
+
         parent::__construct();
         $this->testBll = new TestBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
 
     }
 
@@ -51,6 +56,7 @@ class AddTestController extends BaseController
             if($_POST['domain']=="history")
                 $this->domeniu="HISTORY";
         }
+
        // print("geani");
        // print_r($this->domeniu);
 
@@ -64,6 +70,7 @@ class AddTestController extends BaseController
                 $this->dificultate="HARD";
         }
         $this->testBll->insertTest($TESTID,$this->domeniu,$this->dificultate,$proposerId);
+
         if (isset($_POST['question1'])) {
             $this->question1 = $_POST['question1'];
         }
@@ -81,6 +88,7 @@ class AddTestController extends BaseController
         }
 
         $tempQuestionId = $this->testBll->getIdQuestion();
+
        // print("lubenita1");
        // print_r($tempQuestionId);
         $this->testBll->insertQuestion($tempQuestionId,$TESTID,$this->domeniu,$this->dificultate,$this->question1);
@@ -241,4 +249,11 @@ class AddTestController extends BaseController
        // print("geani nebunu");
 //
     }
+
+ //   public function signUpFamilly(){
+   //     $this->userBLL->signUpParent('Jeanus','janus44','fanica','fanica','fanica@gmail.com','0748367777');
+    //}
+
+
+
 }

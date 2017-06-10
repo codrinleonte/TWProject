@@ -17,6 +17,8 @@ class ChangePasswordController extends BaseController
     {
         parent::__construct();
         $this->userBll = new UserBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
     }
 
     public function index(){
@@ -25,8 +27,10 @@ class ChangePasswordController extends BaseController
 
     public function changePassword()
     {
-        $current_id=$_SESSION['user']['KID_USER_ID'];
+        $type = $_SESSION['user']['type'];
 
+        if ($type == 1) {
+        $current_id = $_SESSION['user']['KID_USER_ID'];
 
         if (isset($_POST['submit'])) {
            $typedOldPassword = $_POST['oldPass'];
@@ -49,6 +53,33 @@ class ChangePasswordController extends BaseController
 
 
     }
+
+        }
+        else if($type==2){
+            $current_id = $_SESSION['user']['PARENT_USER_ID'];
+            if (isset($_POST['submit'])) {
+                $typedOldPassword = $_POST['oldPass'];
+                $typedNewPassword = $_POST['newPass'];
+                $retypedOldPassword = $_POST['newPassRetyped'];
+                if(!$this->userBll->validateParentPassword($current_id,$typedOldPassword)){
+                    $message="Parola veche introdusa este gresita!";
+
+
+                }
+                else if($typedNewPassword !=  $retypedOldPassword){
+                    $message="Parolele nu coincid!";
+
+                }
+                else{
+                    $this->userBll->updateParentPassword($current_id,$typedNewPassword);
+                    $message="Parola a fost schimbata cu succes!";
+                }
+                echo "<script type='text/javascript' >alert('$message') ;location.href='/tw/user/profile'</script>";
+
+
+            }
+        }
+
 
     }
 

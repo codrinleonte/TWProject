@@ -19,6 +19,8 @@ class ParentUserController extends BaseController
     {
         parent::__construct();
         $this->userBll = new UserBLL();
+        if(!isset($_SESSION['user']))
+            $this->redirect("error/index");
 
     }
 
