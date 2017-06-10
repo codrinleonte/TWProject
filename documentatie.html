@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="scholarly.css">
+    <script src="node_modules/prismjs/prism.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <p class="title">Just For Kids Game</p>
+    </header>
+    <article id="echipa" typeof="schema:ScholarlyArticle" resource="#">
+      <h1>Echipa</h1>
+      <section>
+        <ol>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author"  typeof="schema:Person">
+              <span property="schema:familyName">Leonte</span>
+              <span property="schema:givenName">Codrin</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author"typeof="schema:Person">
+              <span property="schema:familyName">Florescu</span>
+              <span property="schema:givenName">Razvan</span>
+            </a>
+          </li>
+          <li property="schema:author" typeof="sa:ContributorRole">
+            <a property="schema:author" typeof="schema:Person">
+              <span property="schema:familyName">Plugariu</span>
+              <span property="schema:givenName">Raluca</span>
+            </a>
+          </li>
+        </ol>
+        <ol>
+          
+        </ol>
+      </section>
+
+      <section id="intro">
+        <h1>Introducere</h1>
+        <p>
+          JFK este un joc Web care ofera copiilor mijloace amuzante de invatare si testare interactiva a cunostintelor generale dintr-un domeniu ales dintr-o lista editabila (exemple tipice: matematica, literatura, geografie, istorie, muzica).Rezultatele testelor realizate vor putea fi raportate parintilor, rudelor sau tutorilor legali via e-mail si fluxuri de stiri Atom. Se vor oferi mai multe niveluri de dificultate in functie de varsta copiilor (EASY - prescolari, MEDIUM - scolari mici,HARD - elevi de gimnaziu etc. ) Parintii/tutorii vor avea posibilitatea monitorizarii progresului inregistrat si a gestionarii testelor si cunostintelor folosite pentru instruire. Bonus: partajarea celor mai bune rezultate obtinute de copii pe minim 2 retele sociale (e.g., Facebook si Twitter).
+        </p>
+      </section>
+      <section id="scop">
+        <p>
+          <strong>Tehnologii : </strong> HTML5, CSS3, JavaScript, PHP, Oracle PL/SQL
+        </p>
+          <p>
+          <strong>Server : </strong> Apache24.  
+        </p>
+          <p>
+          <strong>Adress : </strong> localhost:8181/tw 
+        </p>
+      </section>
+      <section typeof="sa:Abstract" id="scop">
+          <h1>Mod de utilizare prevăzut</h1>
+            <p>
+             Autentificarea in cadrul aplicatie se realizeaza cu ajutorul unui formular de login unde se va verifica usename-ul si parola introduse.
+            </p>
+          <p>
+           Odata autentificat , un parinte vede distribute distributia materiilor in functie de cate teste au fost rezolvate din cadrul materiei respective. De altfel, un parinte poate propune un test care va fi ulterior acceptat sau nu de catre admin, sau poate vizualiza progresele facute de copilul sau.
+          </p>
+           <p>Un user de tip copil completeaza un formular in care isi alege domeniul si dificultatea si poate incepe sa rezolve un test, la finalul caruia primeste un scor.
+          </p>
+          
+          <p>
+            Adminul poate vizualiza lista de copii si parinti si poate sterge dintre acestia. De asemenea, poate adauga un test in cadrul aplicatie. Acesta isi poate citi notificarile legate de testele propuse de catre parinti si poate accepta ca ele sa intre in aplicatie sau nu. 
+          </p>
+          
+      </section>
+
+      <section id="arhi">
+        <h1>Arhitectura aplicației și etape de dezvoltare</h1>
+        <p>
+         Pentru Implementarea acestui Proiect am folosit o arhitectura de tip "Onion Layer", si ca urmare fisierele au fost impartite astfel :
+        </p>
+        <ul>
+          <li>
+            <code>BLL (Business Logic Layer ) </code>contine intefetele si clasele care implementateaza metode
+          </li>
+          <li>
+            <code>DAL (Data Acces Layer) </code> interfetele si clasele de tip Repository care implementeaza metode de acces al Bazei de Date
+          </li>
+          <li>
+            <code>PL (Presentation Layer) </code> puntea de laguta intre BackEnd si FrontEnd.
+          </li>
+            <li>
+            <code>public </code> contine implementarea partii de Design a proiectului
+          </li>
+        </ul>
+       
+    
+        <p>
+          Principalele etape de dezvoltare a aplicației sunt următoarele (nu neapărat în această ordine):
+        </p>
+        <ul>
+          <li>
+            Proiectarea bazei de date Oracle 12c ce va stoca diverse informații despre useri (tip_user, parolă, email), despre testele ce sunt adaugate in baza de data, intrebarile ce compun acele teste si raspunsurile corespunzatoare intrebarilor. Această etapă presupune atât construirea bazei de date, cât și implementarea modelului aplicației ce are ca rol comunicarea cu baza de date. 
+          </li>
+          <li>
+            Implementarea pe partea de front-end face ca proiectul sa se imparta in 3 parti, pentru cele 3 tipuri de useri: parinti, copii si admin. Astfel ca fiecare membru al echipei a fost responsabil cu implementarea 
+          </li>
+          <li>
+            Implementarea formularelor de login atat pentru utilizatori parinte/copil cat si pentru admin, și formular register și felul în care sesiunea utilizatorului.
+        </ul>                
+      </section>
+      <section id="api">
+        <h1>API-uri utilizate</h1>
+        <section id="fcb">
+          <p>
+           Mail Gum - pentru trimiterea mail-urilor
+          </p>
+        </section>  
+       
+      </section> 
+           
+    </article>
+   
+  </body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2017 GitHub, Inc. Terms Privacy Security Status Help
