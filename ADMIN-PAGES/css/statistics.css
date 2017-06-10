@@ -233,6 +233,65 @@ margin-top:150px;
 	
 }
 
+
+.pg-normal {
+      cursor: pointer;
+      
+      padding: 8px 16px;
+      background: linear-gradient(#025d8c,#01537e);
+      display: inline-block;
+      border-radius: 5px 5px 5px 5px;
+
+      }
+
+.pg-normal:hover {
+    box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.4s;
+    color:#fff;
+   }   
+.pg-selected {
+    color: white;
+     padding: 8px 16px;
+    font-weight: bold;        
+    background: linear-gradient(red, black);
+    cursor: pointer;
+    border-radius: 50%;
+    }
+ .prev{
+     cursor: pointer;
+
+     padding: 8px 16px;
+     background-color: #800000;
+     display: inline-block;
+     border-radius: 5px 5px 5px 5px;
+     border-radius: 5px 5px 5px 40px;
+      margin-left: 188px; 
+      
+ }
+
+.prev:hover {
+    box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.4s;
+    color:#800000;
+}
+
+.next:hover {
+    box-shadow: 0 13px 16px 0 rgba(0,0,0,0.2),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.4s;
+    color:#800000;
+}
+
+ .next{
+     cursor: pointer;
+
+     padding: 8px 16px;
+    background-color: #800000;
+     display: inline-block;
+     border-radius: 5px 5px 5px 5px;
+     border-radius: 5px 5px 40px 5px;
+ }
+
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

@@ -3,7 +3,6 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="../css/statistics.css">
-	<script src="../javascript/functii.js"></script>
     <script src="../javascript/paging.js"></script>
 	
 </head>
@@ -14,7 +13,7 @@
 	<div class = "top-nav">
 	<div class = "top-logo"></div>
 	<div class = "settingsBut">
-		<button class="dropbtn"></buton>
+		<button class="dropbtn"></button>
 		<div class = "settings-content">
 			<a href = "changePsw.php">Change password</a><br>
 			<a href = "adminLogin.php">Logout</a>
@@ -51,7 +50,7 @@
             ?>
 				
         <?php 
-            $sql_kid = oci_parse($conn,"select * from (select * from kids_users where active=1) where rownum <10");
+            $sql_kid = oci_parse($conn,"select * from (select * from kids_users where active=1) where rownum <40");
             oci_execute($sql_kid);
        
                               
@@ -100,16 +99,17 @@
                     <div id="pageNavPosition1" class="pageNavPosition1"></div>
 
                                <script type="text/javascript"><!--
-                                  var pager1 = new Pager('table1', 3);
-                               pager1.init();
-                               pager1.showPage(1);
-                               pager1.showPageNav('pager1', 'pageNavPosition1');
-                              //--></script>
+                    var pager = new Pager('table1', 12);
+                    pager.init();
+                  
+                    pager.showPageNav('pager', 'pageNavPosition1');
+                    pager.showPage(1);
+                    //--></script>
                               
 				</div>
         </div>
         <?php 
-            $sql_par = oci_parse($conn,"select * from (select * from parents_users where active=1) where rownum <10");
+            $sql_par = oci_parse($conn,"select * from (select * from parents_users where active=1) where rownum <40");
             oci_execute($sql_par);
                               
                               
@@ -154,11 +154,13 @@
                     <div id="pageNavPosition2" class="pageNavPosition2"></div>
 
                                <script type="text/javascript"><!--
-                                  var pager2 = new Pager('table2', 3);
-                               pager2.init();
-                               pager2.showPage(1);
-                               pager2.showPageNav('pager', 'pageNavPosition1');
-                              //--></script>
+                    var pager2 = new Pager('table2', 12);
+                    pager2.init();
+                  
+                    pager2.showPageNav('pager2', 'pageNavPosition2');
+                    pager2.showPage(1);
+                    //--></script>
+                              
 				</div>
 
 				   
@@ -198,7 +200,7 @@
 		 
 		 
 				 
-              
+   <script src="../javascript/functii.js"></script>           
 
 </body>
 </html>

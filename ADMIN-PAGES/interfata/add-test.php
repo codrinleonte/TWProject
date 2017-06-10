@@ -41,7 +41,6 @@
      header("Location: 404.php");
 }
     
-    $username = $_SESSION['login'];
     
     
     
@@ -55,12 +54,7 @@
                  $question7 = $_POST['question7'];
                 $username = $_SESSION['login'];
                 
-                $sql_adm = oci_parse($conn, "select ADMIN_USER_ID FROM ADMIN_USERS WHERE USERNAME ='$username'");
-                oci_execute($sql_adm);
-                
-                if(ociFetch($sql_adm)){
-                    $proposer_id1 = ociresult($sql_adm, 1);
-                }
+               
                     
                 $domain = $_POST['domain'];
                 $difficulty =$_POST['difficulty'];
@@ -69,6 +63,7 @@
                 oci_execute($sql_d);
                  if(ociFetch($sql_d)){
                      $domain_id = ociresult($sql_d,1);
+                     echo $domain_id;
                  }
                     
                 
@@ -94,7 +89,7 @@
                          $question_id7 = "q" . ((string)$q_id+7);
                     }
                 
-                   
+                   $id_adm = 200;
                 $sql_a = oci_parse($conn, "select to_char(max(CAST (substr(answer_id,2) as int)))  from answers_jfk");
                  oci_execute($sql_a);
                     if(ociFetch($sql_a)){
@@ -108,13 +103,15 @@
                          $answer_id6 = "a".((string)$a_id+6);
                          $answer_id7 ="a".((string)$a_id+7);
                     }
-            $proposer_id = 34;
+                
+                
+                $domain_id = 108;
                 $active = 1;
                 $solved = 0;
                 $exist = 1;
                 $sqt = oci_parse($conn, "INSERT INTO PROPOSED_TESTS(TEST_ID, PROPOSER_ID, DOMAIN_ID, ACTIVE) VALUES (:mtest_id, :mproposer_id, :mdomain_id, :mactive)");
                 oci_bind_by_name($sqt, ':mtest_id',$test_id);
-                oci_bind_by_name($sqt, ':mproposer_id',$proposer_id1);
+                oci_bind_by_name($sqt, ':mproposer_id',$id_adm);
                 oci_bind_by_name($sqt, ':mdomain_id',$domain_id);
                 oci_bind_by_name($sqt, ':mactive',$active);
                     oci_execute($sqt);
@@ -264,9 +261,9 @@
                 oci_execute($sqa7);
                 
                  oci_commit($conn); 
-                
-               header("Location:add-test.php");
-                
+             
+                     
+ header("Location: add-test.php");
                 
                 
             }
