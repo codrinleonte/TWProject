@@ -17,7 +17,7 @@ Server : Apache24.
 Adress : localhost:8181/tw
 
 Pentru Implementarea acestui Proiect am folosit o arhitectura  de tip "Onion Layer", si ca urmare fisierele au fost impartite astfel : 
- * BLL (Business Logic Layer ) - contine intefetele si clasele  care implementateaza metode     
+ * BLL (Business Logic Layer ) - contine interfetele si clasele  care implementateaza metode     
     
  * DAL (Data Acces Layer) - interfetele si clasele de tip Repository care implementeaza metode de acces al Bazei de Date
      
